@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.fb920915.chunk.css",
-    "main.js": "/static/js/main.1758e715.chunk.js",
-    "main.js.map": "/static/js/main.1758e715.chunk.js.map",
+    "main.js": "/static/js/main.996bf838.chunk.js",
+    "main.js.map": "/static/js/main.996bf838.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.fa26320c.js",
     "runtime-main.js.map": "/static/js/runtime-main.fa26320c.js.map",
     "static/css/2.aeaa2a60.chunk.css": "/static/css/2.aeaa2a60.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/2.aeaa2a60.chunk.css.map": "/static/css/2.aeaa2a60.chunk.css.map",
     "static/css/main.fb920915.chunk.css.map": "/static/css/main.fb920915.chunk.css.map",
     "static/js/2.73a66a64.chunk.js.LICENSE.txt": "/static/js/2.73a66a64.chunk.js.LICENSE.txt",
-    "static/js/main.1758e715.chunk.js.LICENSE.txt": "/static/js/main.1758e715.chunk.js.LICENSE.txt",
+    "static/js/main.996bf838.chunk.js.LICENSE.txt": "/static/js/main.996bf838.chunk.js.LICENSE.txt",
     "static/media/amber-grad-header.jpg": "/static/media/amber-grad-header.65f77cff.jpg",
     "static/media/paper-kit.scss?v=1.3.0": "/static/media/nucleo-icons.ec16bc4c.woff2"
   },
@@ -21,6 +21,6 @@
     "static/css/2.aeaa2a60.chunk.css",
     "static/js/2.73a66a64.chunk.js",
     "static/css/main.fb920915.chunk.css",
-    "static/js/main.1758e715.chunk.js"
+    "static/js/main.996bf838.chunk.js"
   ]
 }
