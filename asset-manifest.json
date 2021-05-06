@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ostlerfilmandphoto/static/css/main.48acf7c9.chunk.css",
+    "main.js": "/ostlerfilmandphoto/static/js/main.b80df4f4.chunk.js",
+    "main.js.map": "/ostlerfilmandphoto/static/js/main.b80df4f4.chunk.js.map",
+    "runtime-main.js": "/ostlerfilmandphoto/static/js/runtime-main.fc729676.js",
+    "runtime-main.js.map": "/ostlerfilmandphoto/static/js/runtime-main.fc729676.js.map",
+    "static/css/2.aeaa2a60.chunk.css": "/ostlerfilmandphoto/static/css/2.aeaa2a60.chunk.css",
+    "static/js/2.9ddf354c.chunk.js": "/ostlerfilmandphoto/static/js/2.9ddf354c.chunk.js",
+    "static/js/2.9ddf354c.chunk.js.map": "/ostlerfilmandphoto/static/js/2.9ddf354c.chunk.js.map",
+    "index.html": "/ostlerfilmandphoto/index.html",
+    "static/css/2.aeaa2a60.chunk.css.map": "/ostlerfilmandphoto/static/css/2.aeaa2a60.chunk.css.map",
+    "static/css/main.48acf7c9.chunk.css.map": "/ostlerfilmandphoto/static/css/main.48acf7c9.chunk.css.map",
+    "static/js/2.9ddf354c.chunk.js.LICENSE.txt": "/ostlerfilmandphoto/static/js/2.9ddf354c.chunk.js.LICENSE.txt",
+    "static/js/main.b80df4f4.chunk.js.LICENSE.txt": "/ostlerfilmandphoto/static/js/main.b80df4f4.chunk.js.LICENSE.txt",
+    "static/media/amber-grad-header.jpg": "/ostlerfilmandphoto/static/media/amber-grad-header.65f77cff.jpg",
+    "static/media/paper-kit.scss?v=1.3.0": "/ostlerfilmandphoto/static/media/nucleo-icons.ec16bc4c.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc729676.js",
+    "static/css/2.aeaa2a60.chunk.css",
+    "static/js/2.9ddf354c.chunk.js",
+    "static/css/main.48acf7c9.chunk.css",
+    "static/js/main.b80df4f4.chunk.js"
+  ]
+}
