@@ -97,7 +97,7 @@ function IndexNavbar() {
           <Nav navbar>
             <NavItem>
               <NavLink
-                href="/gallery"
+                href="/#/gallery"
               >
                 Gallery
               </NavLink>

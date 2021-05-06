@@ -39,7 +39,7 @@ import ContactPage from "views/ContactPage.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route  path="/gallery" render={(props) => <GalleryPage {...props} />}/>
+      <Route  path="/#/gallery" render={(props) => <GalleryPage {...props} />}/>
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
       <Route  path="/about" render={(props) => <AboutPage {...props} />}/>
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
