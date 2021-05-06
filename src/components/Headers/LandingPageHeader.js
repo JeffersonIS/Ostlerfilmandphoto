@@ -57,12 +57,12 @@ function LandingPageHeader() {
             <h1>Ostler Film & Photo</h1>
             <h3>Family | Portrait | Wedding</h3>
             <br />
-            <a href="/contact">
+            <a href="/#/contact">
               <Button color="warning" outline type="button" className="m-2 mt-4">
                     Book a Session
               </Button>
             </a>
-            <a href="/gallery">
+            <a href="/#/gallery">
               <Button outline type="button" className="m-2 mt-4"
               onMouseOver={(e)=> {e.target.style.color = "gray"; e.target.style.backgroundColor = "white"}} color="white" style={{borderColor:"white"}}
               onMouseOut={(e)=> {e.target.style.color = "white"; e.target.style.backgroundColor = "transparent"}}

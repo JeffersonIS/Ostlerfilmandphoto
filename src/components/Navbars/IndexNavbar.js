@@ -68,7 +68,7 @@ function IndexNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            href="/"
+            href="/#/"
             title="Company Name"
           >
              {/* <img src={white_logo} className="m-0 p-0" style={{height:"10em", width:"10em"}}></img> */}
@@ -105,21 +105,21 @@ function IndexNavbar() {
 
             <NavItem>
               <NavLink
-                href="/pricing"
+                href="/#/pricing"
               >Pricing
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink
-                href="/contact"
+                href="/#/contact"
               >Contact
               </NavLink>
             </NavItem>
 
             <NavItem className="mr-5">
               <NavLink
-                href="/about"
+                href="/#/about"
               >About
               </NavLink>
             </NavItem>

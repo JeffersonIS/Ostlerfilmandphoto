@@ -18,7 +18,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 // styles
 import "bootstrap/scss/bootstrap.scss";
@@ -37,14 +37,14 @@ import ContactPage from "views/ContactPage.js";
 // others
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
-      <Route  path="/#/gallery" render={(props) => <GalleryPage {...props} />}/>
+      <Route  path="/gallery" render={(props) => <GalleryPage {...props} />}/>
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
       <Route  path="/about" render={(props) => <AboutPage {...props} />}/>
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
