@@ -65,7 +65,7 @@ function LandingPageHeader() {
             <a href="/gallery">
               <Button outline type="button" className="m-2 mt-4"
               onMouseOver={(e)=> {e.target.style.color = "gray"; e.target.style.backgroundColor = "white"}} color="white" style={{borderColor:"white"}}
-              onMouseOut={(e)=> {e.target.style.color = "white"; e.target.style.backgroundColor = "transparent"}} color="white" style={{borderColor:"white"}}
+              onMouseOut={(e)=> {e.target.style.color = "white"; e.target.style.backgroundColor = "transparent"}}
               >
                     See the Gallery
               </Button>

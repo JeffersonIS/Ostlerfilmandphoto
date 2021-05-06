@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import * as emailjs from 'emailjs-com';
 //import Layout from '../components/layout'
 import { Button, FormFeedback, Form, FormGroup, FormText, Label, Input,
-        Col, Row, Container } from 'reactstrap'
-import { isThisTypeNode } from 'typescript';
+        Col, Row } from 'reactstrap'
 
 class ContactForm extends Component {
     constructor(props){

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Row, Col} from "reactstrap";
+import { Container, Row, Col} from "reactstrap";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import Gallery from "react-photo-gallery";
 
@@ -9,10 +9,10 @@ function AboutPageContent(props){
                     width: 2048,
                     height: 1365
                     }]
-    const photo2 = [{src: "https://ik.imagekit.io/ostlerfilmandphoto/Other/IMG-0108_8h31X92HY.JPG",
-                    width: 1538,
-                    height: 2048
-                    }]
+    // const photo2 = [{src: "https://ik.imagekit.io/ostlerfilmandphoto/Other/IMG-0108_8h31X92HY.JPG",
+    //                 width: 1538,
+    //                 height: 2048
+    //                 }]
 
     return (
         <>

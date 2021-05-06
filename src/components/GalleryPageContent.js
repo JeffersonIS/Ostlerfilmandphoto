@@ -19,7 +19,7 @@
 import React from "react";
 
 // reactstrap components
-import { Button, NavItem, NavLink, Nav, TabContent, Container} from "reactstrap";
+import { NavItem, NavLink, Nav, Container} from "reactstrap";
 
 // core components
 import DemoFooter from "components/Footers/DemoFooter.js";

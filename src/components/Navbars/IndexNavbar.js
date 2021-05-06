@@ -21,7 +21,6 @@ import React from "react";
 import classnames from "classnames";
 // reactstrap components
 import {
-  Button,
   Collapse,
   NavbarBrand,
   Navbar,
@@ -30,8 +29,6 @@ import {
   Nav,
   Container,
 } from "reactstrap";
-
-import white_logo from "assets/img/Logo_White.png";
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
