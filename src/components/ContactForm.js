@@ -213,7 +213,7 @@ render() {
                             <option>Portraits</option>
                             <option>Engagements</option>
                             <option>Bridals</option>
-                            <option>Wedding Day Package</option>
+                            <option>Wedding Package</option>
                         </Input>
                         <FormFeedback invalid>Select the type of session you'd like</FormFeedback>
                     </FormGroup>
