@@ -151,7 +151,9 @@ render() {
     return (
       <>
         <div>
-          <p className="mb-4 pt-2" style={{fontSize: "120%"}}>Send us a message and we'll get back to you. We would love to work with you.</p>
+          <p className="pt-2" style={{fontSize: "120%"}}>Send us a message and we'll respond quickly. We would love to work with you!</p>
+          <p className="mb-4 " style={{fontSize: "120%",}}>**We will be unavailable August 14-September 12.</p>
+
 
           <p className="h5 p-2 mb-4"
             style={{backgroundColor: "#ddffdd", borderRadius: "8px", fontSize: "130%"}}
@@ -231,7 +233,7 @@ render() {
                             invalid={this.state.requested_dateInvalid}
                         />
                         <FormFeedback invalid>Pick a proper date</FormFeedback>
-                        <FormText>The date you wish to take pictures on.</FormText>
+                        <FormText>The date you wish to take pictures on.**</FormText>
                     </FormGroup>
                 </Col>
             </Row>

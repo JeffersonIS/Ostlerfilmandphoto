@@ -5,7 +5,7 @@ const faqData = [{
     question: "What is your turnaround time?",
     answer: "Less than a week, and sometimes as soon as 24 hours, depending on our bookings.",
 },{
-    question: "",
-    answer: "",
+    question: "Do you do videos?",
+    answer: "Currently we do not offer video services, but will in the future. Stay tuned!"
 },]
 export default faqData;

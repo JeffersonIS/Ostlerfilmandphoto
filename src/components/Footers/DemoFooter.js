@@ -31,14 +31,14 @@ function DemoFooter() {
             <ul>
               <li>
                 <a href="/#/contact">
-                  Contact Us
+                  Contact
                 </a>
-              </li>
+              </li>|
               <li>
                 <a href="/#/pricing" >
                   Pricing
                 </a>
-              </li>
+              </li>|
               <li>
                 <a href="https://www.facebook.com/Ostler-Film-and-Photo-104315925157843"
                   title="Like us on Facebook"

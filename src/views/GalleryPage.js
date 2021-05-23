@@ -34,7 +34,7 @@ function GalleryPage() {
   return (
     <div>
       <IndexNavbar />
-      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Engagements/TheEvans/IMG_5620_4bn0tiRTwy.jpg"/>
+      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Engagements/ThePratts/IMG_5932_R_8XjroVu.jpg"/>
       <GalleryPageContent/>
     </div>
   );
