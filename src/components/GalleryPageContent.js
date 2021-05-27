@@ -34,6 +34,7 @@ function GalleryPageContent() {
   const [activeTab, setActiveTab] = React.useState(0);
   const [displayedSession, setDisplayedSession] = React.useState("none");
   let galleryHTML;
+  const noBridalsToRender = "We do not have any bridal sessions to show you yet. Come back soon!"
 
   const toggle = (tab) => {
     if (activeTab !== tab) {
@@ -43,7 +44,6 @@ function GalleryPageContent() {
   };
 
   const handleSelectSession = (session) => {
-    console.log("photocard onclick session: ", session)
     setDisplayedSession(Number(session));
   };
 
@@ -63,20 +63,26 @@ function GalleryPageContent() {
 
   if(displayedSession === "none"){
     //display all photo sessions for the specified tab
-    let galleryCardsToRender = galleryData[Number(activeTab)];
+    if(activeTab === 2 && galleryCategories[activeTab]){
+      galleryHTML = (<div className="pt-5" style={{marginBottom: "20em"}}>
+                      <div>{noBridalsToRender}</div>
+                    </div>)
+    } else {
+      let galleryCardsToRender = galleryData[Number(activeTab)];
+      galleryHTML = galleryCardsToRender.map((item) => {
+          return( <PhotoCard onClick={handleSelectSession} item = {item} key={item.sessionID}/> )
+        });
+    }
 
-    galleryHTML = galleryCardsToRender.map((item) => {
-        return( <PhotoCard onClick={handleSelectSession} item = {item} key={item.sessionID}/> )
-      });
   } else { //if a session has been clicked, this determines its HTML
     //get the specific session clicked
     let photos = galleryData[activeTab][displayedSession].photos;
-    console.log(activeTab, displayedSession)
     galleryHTML = <div>
                     <div className="h3 pb-3">{galleryData[activeTab][displayedSession].name}</div>
                     <Photos photos={ photos } />
                   </div>
   }
+
 
   return (
     <>

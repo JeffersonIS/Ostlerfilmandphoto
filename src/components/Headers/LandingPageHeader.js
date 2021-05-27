@@ -55,7 +55,7 @@ function LandingPageHeader() {
         <Container>
           <div className="motto text-center">
             <h1>Ostler Film & Photo</h1>
-            <h3>Family | Portrait | Wedding</h3>
+            <h3>Wedding | Portrait | Family</h3>
             <br />
             <a href="/#/contact">
               <Button color="warning" outline type="button" className="m-2 mt-4">

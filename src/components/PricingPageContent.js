@@ -8,12 +8,27 @@ import faqData from "data/faqData.js";
 function PricingPageContent(props){
 
     const pricingTableHTML = pricingData.map(item => {
+        let pricingHTML;
+        if(item.salePrice === ""){
+            pricingHTML = (
+                <>
+                    <span className="ml-1" style={{textDecoration:"none", fontWeight:"lighter", fontSize:"110%"}}>{item.price}</span>
+                </>
+            )
+        } else {
+            pricingHTML = (
+                <>
+                    <span style={{textDecoration:"line-through", fontWeight:"lighter", fontSize:"100%"}}>{item.price}</span>
+                    <span className="ml-1" style={{textDecoration:"none", fontWeight:"lighter", fontSize:"110%"}}>{item.salePrice}</span>
+                </>
+            )
+        }
+
         return(
             <Col className="mb-4" style={{minWidth:"18em"}}>
                 <h5 className="h5">{item.title}</h5>
-                <h6 className="pb-2"
-                    style={{top:"5px", borderBottom: "1px solid lightgray"}}>
-                {item.price}
+                <h6 className="pb-2" style={{top:"5px", borderBottom: "1px solid lightgray"}}>
+                    {pricingHTML}
                 </h6>
                 <ul className="text-left pt-2" style={{listStyleType: "none", fontSize:"110%"}}>
                     {item.detailItems.map((detail) => {
