@@ -22,6 +22,7 @@ import React from "react";
 import { Button, Container } from "reactstrap";
 
 // core components
+const headerImgPath = "https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Truscott/IMG_6662_g5n0Zvj5yk.jpg";
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();
@@ -45,7 +46,7 @@ function LandingPageHeader() {
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/img/amber-grad-header.jpg").default + ")",
+            "url("+ headerImgPath + ")",
         }}
         className="page-header"
         data-parallax={true}

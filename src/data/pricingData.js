@@ -2,7 +2,7 @@ const pricingData = [
     {
         title: "Engagements & Bridals",
         price: "$200",
-        salePrice: "$100",
+        salePrice: "",
         detailItems: [
             "60+ minute photo session",
             "Poses included ;)",
@@ -13,7 +13,7 @@ const pricingData = [
     {
         title: "Wedding Package",
         price: "$800",
-        salePrice: "$400",
+        salePrice: "",
         detailItems: [
             "Includes bridal and engagment sessions",
             "Full wedding day coverage",

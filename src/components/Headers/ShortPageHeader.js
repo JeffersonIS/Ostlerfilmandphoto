@@ -48,10 +48,6 @@ function ShortPageHeader(props) {
           backgroundImage:
             "url("+ imagePath + ")",
         }}
-        // style={{
-        //   backgroundImage:
-        //     "url(" + require("assets/img/boat-beach-2.JPG").default + ")",
-        // }}
         data-parallax={true}
         ref={pageHeader}
       >

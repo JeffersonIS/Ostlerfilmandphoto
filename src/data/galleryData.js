@@ -4,10 +4,10 @@ import portraitSessions from "data/portraitSessions.js";
 import engagementSessions from "data/engagmentSessions.js";
 import bridalSessions from "data/bridalSessions.js";
 
-const galleryCategories = ["Portraits", "Engagements", "Bridals", "Families"];
+const galleryCategories = [ "Engagements", "Bridals","Portraits", "Families"];
 
 
-const galleryData = [portraitSessions,engagementSessions,bridalSessions,familySessions];
+const galleryData = [engagementSessions,bridalSessions,portraitSessions,familySessions];
 
-export {galleryData};
+export {galleryData}; 
 export {galleryCategories};

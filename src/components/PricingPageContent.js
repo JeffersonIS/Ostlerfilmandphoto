@@ -25,26 +25,26 @@ function PricingPageContent(props){
         }
 
         return(
-            <Col className="mb-4" style={{minWidth:"18em"}}>
+            <Col key={item.title} className="mb-4" style={{minWidth:"18em"}}>
                 <h5 className="h5">{item.title}</h5>
                 <h6 className="pb-2" style={{top:"5px", borderBottom: "1px solid lightgray"}}>
                     {pricingHTML}
                 </h6>
                 <ul className="text-left pt-2" style={{listStyleType: "none", fontSize:"110%"}}>
-                    {item.detailItems.map((detail) => {
+                    {item.detailItems.map((detail, count) => {
 
                         return(
-                            <li className="m-3">{detail}</li>
+                            <li key={count} className="m-3">{detail}</li>
                         );
                     })}
                 </ul>
             </Col>
     )});
 
-    const faqTableHTML = faqData.map(item => {
+    const faqTableHTML = faqData.map((item, count) => {
         return(
-            <div>
-                <p className="h5" style={{fontSize:"130%"}}>{item.question}</p>
+            <div key={count}>
+                <p  className="h5" style={{fontSize:"130%"}}>{item.question}</p>
                 <p className="pb-4" style={{fontSize:"110%"}} >{item.answer}</p>
             </div>
         )

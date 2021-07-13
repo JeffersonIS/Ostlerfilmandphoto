@@ -17,7 +17,7 @@ function ContactPage() {
   return (
     <div>
       <IndexNavbar />
-      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Other/drone-curve-road__ey7gQQ5_.JPG"/>
+      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Family/TheMcBrides/IMG_6388_48tDvERzU.jpg"/>
       <ContactPageContent />
     </div>
   );
