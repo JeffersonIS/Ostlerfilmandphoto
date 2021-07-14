@@ -10,6 +10,7 @@
     "classnames": "2.2.6",
     "emailjs": "^3.4.0",
     "emailjs-com": "^2.6.4",
+    "gh-pages": "^3.2.3",
     "imagekitio-react": "^1.0.9",
     "moment": "2.29.1",
     "node-sass": "5.0.0",
