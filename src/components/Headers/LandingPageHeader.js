@@ -22,7 +22,7 @@ import React from "react";
 import { Button, Container } from "reactstrap";
 
 // core components
-const headerImgPath = "https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Truscott/IMG_6662_g5n0Zvj5yk.jpg";
+const headerImgPath = "https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_7135_x5tD7Eckc.jpg?updatedAt=1641594607775";
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();

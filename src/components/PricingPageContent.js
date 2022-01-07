@@ -26,7 +26,7 @@ function PricingPageContent(props){
 
         return(
             <Col key={item.title} className="mb-4" style={{minWidth:"18em"}}>
-                <h5 className="h5">{item.title}</h5>
+                <h5 className="h5" style={{fontWeight: "500"}}>{item.title}</h5>
                 <h6 className="pb-2" style={{top:"5px", borderBottom: "1px solid lightgray"}}>
                     {pricingHTML}
                 </h6>
@@ -60,7 +60,7 @@ function PricingPageContent(props){
                 <div className="text-center">
                 <h1 style={{color:"white", marginBottom:"1.3em"}}>Pricing</h1>
                 </div>
-                    <div className="text-center pt-3">
+                    <div className="text-center pt-3" style={{fontWeight: "500"}}>
                         <Row>
                         {pricingTableHTML}
                         </Row>
@@ -77,9 +77,9 @@ function PricingPageContent(props){
                             </Col>
                         </Row>
                     </div>
-                    <div className="mt-5 pt-3">
+                    <div className="mt-5 pt-3" >
                         <h4 className="h4 mb-4">Frequently Asked Questions</h4>
-                        <div>
+                        <div >
                             {faqTableHTML}
                         </div>
                     </div>

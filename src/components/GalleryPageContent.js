@@ -48,7 +48,7 @@ function GalleryPageContent() {
   const galleryMenuHTML = galleryCategories.map((item,count) => {
     return(
         <NavItem key={count + item}>
-        <NavLink style ={{cursor: "pointer", fontWeight:"300"}}
+        <NavLink style ={{cursor: "pointer", fontWeight:"500"}}
             className={Number(activeTab) === Number(count) ? "active" : ""}
             onClick={() => {
             toggle(Number(count));
@@ -62,12 +62,11 @@ function GalleryPageContent() {
   if(displayedSession === "none"){
     //display all photo sessions for the specified tab
 
-      let galleryCardsToRender = galleryData[Number(activeTab)];
-
-      galleryHTML = galleryCardsToRender.map((item) => {
+      //let galleryCardsToRender = galleryData[Number(activeTab)];
+      galleryHTML = galleryData[Number(activeTab)].map((item) => {
           return( <PhotoCard onClick={handleSelectSession} item = {item} key={item.sessionID}/> )
         });
-    
+
 
   } else { //if a session has been clicked, this determines its HTML
     //get the specific session clicked

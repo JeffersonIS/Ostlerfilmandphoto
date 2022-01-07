@@ -1,6 +1,6 @@
 
 const TheEvans = {name:"The Evans",
-    sessionID: "1",
+    sessionID: "0",
     folderPath:"Engagements/TheEvans/",
     imgHeaderPath: "IMG_5653_0pnI9XNpg.jpg",
     photos: [{

@@ -1,13 +1,13 @@
-
-import familySessions from "data/familySessions.js";
-import portraitSessions from "data/portraitSessions.js";
+import portraitsFamily from "data/portraitsFamily.js";
 import engagementSessions from "data/engagmentSessions.js";
-import bridalSessions from "data/bridalSessions.js";
+import bridalsWeddings from "data/bridalsWeddings.js";
 
-const galleryCategories = [ "Engagements", "Bridals","Portraits", "Families"];
+const galleryCategories = [ "Engagements", "Bridals & Wedding","Portraits & Family"];
 
 
-const galleryData = [engagementSessions,bridalSessions,portraitSessions,familySessions];
+
+
+const galleryData = [engagementSessions,bridalsWeddings,portraitsFamily];
 
 export {galleryData}; 
 export {galleryCategories};

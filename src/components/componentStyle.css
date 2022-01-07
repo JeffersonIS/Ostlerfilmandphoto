@@ -1,0 +1,13 @@
+.card-style {
+    max-width: 50em;
+    width: auto;
+    max-height: 35em;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-style {
+      max-width: 60em;
+      max-height: 60em;
+
+    }
+  }

@@ -36,6 +36,7 @@ function Index() {
       document.body.classList.remove("index");
     };
   });
+
   return (
     <>
       <IndexNavbar />

@@ -33,6 +33,7 @@ import {
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+  const [marginTopValue, setMarginTopValue] = React.useState("-25px")
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
@@ -42,15 +43,17 @@ function IndexNavbar() {
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 150 ||
-        document.body.scrollTop > 150
+        document.documentElement.scrollTop > 130 ||
+        document.body.scrollTop > 130
       ) {
+        setMarginTopValue("0px")
         setNavbarColor("");
       } else if (
-        document.documentElement.scrollTop < 151 ||
-        document.body.scrollTop < 151
+        document.documentElement.scrollTop < 131 ||
+        document.body.scrollTop < 131
       ) {
         setNavbarColor("navbar-transparent");
+        setMarginTopValue("-25px")
       }
     };
 
@@ -63,7 +66,8 @@ function IndexNavbar() {
 
   //Documentation Link: https://demos.creative-tim.com/paper-kit-react/#/documentation?ref=pkr-index-navbar}
   return (
-    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
+    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg" style={{marginTop: marginTopValue}}>
+
       <Container>
         <div className="navbar-translate">
           <NavbarBrand

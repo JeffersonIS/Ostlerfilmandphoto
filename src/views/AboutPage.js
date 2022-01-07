@@ -17,7 +17,7 @@ function AboutPage() {
   return (
     <div>
       <IndexNavbar />
-      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/tr:w-5466,h-2720,cm-extract,x-0,y-924/Other/Amber___Jefferson-6_1__-5BKehZ9K.jpg"/>
+      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_8023_l0pTznAvLc8o.jpg?updatedAt=1641597903225"/>
       <AboutPageContent />
     </div>
   );

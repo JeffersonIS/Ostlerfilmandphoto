@@ -1,6 +1,5 @@
 import TheEvans from "./Engagements/TheEvans.js";
-import ThePratts from "./Engagements/ThePratts.js";
 
-const engagementSessions = [ThePratts,TheEvans]
+const engagementSessions = [TheEvans]
 
 export default engagementSessions;
