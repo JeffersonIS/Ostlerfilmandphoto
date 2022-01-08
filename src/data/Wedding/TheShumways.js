@@ -1,4 +1,4 @@
-const TheShumways = {name:"The Shuways",
+const TheShumways = {name:"The Shumways",
     sessionID: "0",
     folderPath:"Wedding/Shumway/",
     imgHeaderPath: "IMG_7251_6lsdM61Uy.jpg?updatedAt=1641594609769",
