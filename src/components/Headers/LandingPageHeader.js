@@ -46,7 +46,7 @@ function LandingPageHeader() {
       <div
         style={{
           backgroundImage:
-            "url("+ headerImgPath + ")",
+            "url("+ headerImgPath + ")", 
         }}
         className="page-header"
         data-parallax={true}
@@ -72,7 +72,7 @@ function LandingPageHeader() {
               </Button>
             </a>
 
-          </div>
+          </div>    
         </Container>
       </div>
     </>

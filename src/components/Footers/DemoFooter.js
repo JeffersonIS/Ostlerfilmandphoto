@@ -43,14 +43,14 @@ function DemoFooter() {
                 <a href="https://www.facebook.com/Ostler-Film-and-Photo-104315925157843"
                   title="Like us on Facebook"
                   target="_blank">
-                  <i className="fa fa-instagram" />
+                  <i className="fa fa-facebook-square" />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/ostlerfilmandphoto"
                   title="Follow us on Instagram"
                   target="_blank">
-                  <i className="fa fa-facebook-square" />
+                   <i className="fa fa-instagram" />
                 </a>
               </li>
             </ul>

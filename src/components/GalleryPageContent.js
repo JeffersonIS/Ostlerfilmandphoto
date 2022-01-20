@@ -1,38 +1,30 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-
-// reactstrap components
-import { NavItem, NavLink, Nav, Container} from "reactstrap";
-
-// core components
+import { NavItem, NavLink, Nav, Container, Row, Col} from "reactstrap";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import PhotoCard from "components/PhotoCard.js"
 import Photos from "components/Photos.js";
+import PhotoVideoToggle from "./PhotoVideoToggle";
+import { photoGalleryData, photoGalleryCategories } from "data/photoGalleryData.js";
+import { videoGalleryData, videoGalleryCategories } from "data/videoGalleryData.js";
 
-// import data object
-import { galleryData, galleryCategories } from "data/galleryData.js";
+import BookNowButton from "./BookNowButton";
 
 function GalleryPageContent() {
+  const [showPhotoGallery, setShowPhotoGallery] = React.useState(true);
   const [activeTab, setActiveTab] = React.useState(0);
   const [displayedSession, setDisplayedSession] = React.useState("none");
-  let galleryHTML;
+  let galleryHTML, galleryData, galleryCategories, videoMessage;
+
+  showPhotoGallery ? galleryData = photoGalleryData : galleryData = videoGalleryData;
+
+  if(showPhotoGallery){
+    galleryData = photoGalleryData;
+    galleryCategories = photoGalleryCategories;
+  } else {
+    galleryData = videoGalleryData;
+    galleryCategories = videoGalleryCategories;
+    videoMessage = "We are currently building our video portfolio out this year. Ask us about current promotions on videography!"
+  }
 
   const toggle = (tab) => {
     if (activeTab !== tab) {
@@ -61,13 +53,9 @@ function GalleryPageContent() {
 
   if(displayedSession === "none"){
     //display all photo sessions for the specified tab
-
-      //let galleryCardsToRender = galleryData[Number(activeTab)];
-      galleryHTML = galleryData[Number(activeTab)].map((item) => {
+      galleryHTML = galleryData[Number(activeTab)]?.map((item) => {
           return( <PhotoCard onClick={handleSelectSession} item = {item} key={item.sessionID}/> )
         });
-
-
   } else { //if a session has been clicked, this determines its HTML
     //get the specific session clicked
     let photos = galleryData[activeTab][displayedSession].photos;
@@ -89,19 +77,34 @@ function GalleryPageContent() {
             <h1 style={{color:"white", marginBottom:"1.3em"}}>The Gallery</h1>
           </div>
 
+          {/*Toggle */}
+          <div className="text-center mb-5 font500">
+          <PhotoVideoToggle
+              onChange={setShowPhotoGallery}
+              showPhotoData={showPhotoGallery}
+          ></PhotoVideoToggle>
+          </div>
+
           {/*Sub Nav menu */}
           <div className="nav-tabs-navigation text-center">
             <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
+              <Row>
+                <Col>
+                <Nav role="tablist" tabs>
                 {galleryMenuHTML}
               </Nav>
+
+                </Col>
+              </Row>
             </div>
           </div>
 
-          {/* Tab panes */}
-          <div className="text-center">
+          {/* Gallery Content */}
+          <div className="text-center mb-5">
+            <span className="font500">{videoMessage}</span>
             {galleryHTML}
           </div>
+          <BookNowButton></BookNowButton>
         </Container>
       </div>
       <DemoFooter />

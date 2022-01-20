@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as emailjs from 'emailjs-com';
-//import Layout from '../components/layout'
+import "components/componentStyle.css"
 import { Button, FormFeedback, Form, FormGroup, FormText, Label, Input,
         Col, Row } from 'reactstrap'
 
@@ -75,7 +75,7 @@ validateInput(name, email, requested_date, type){
     }
 
     //Validate Type
-    if(type === "Family" || type === "Portraits" || type === "Engagements" || type === "Bridals" || type === "Wedding Package"){
+    if(type === "Family" || type === "Portraits" || type === "Engagements" || type === "Bridals (Photo)" || type === "Wedding Package (Photo)" || type === "Bridals (Video)" || type === "Wedding Package (Video)" || type === "Premium Wedding Package (Video)"){
         typeValid = true;
         this.setState({ typeValid: true })
         this.setState({typeInvalid: false})
@@ -151,16 +151,13 @@ render() {
     return (
       <>
         <div>
-          <p className="pt-2" style={{fontSize: "120%"}}>Send us a message and we'll respond quickly. We would love to work with you!</p>
-          <br></br>
-
-          <p className="h5 p-2 mb-4"
+          <p className="h5 p-2 mb-4 font500"
             style={{backgroundColor: "#ddffdd", borderRadius: "8px", fontSize: "130%"}}
             hidden={this.state.hideSuccess}>
               Form submitted successfully! We'll get back to you very soon. <br></br>
               Check your email for a confimation. We emailed {this.state.showEmail}
           </p>
-          <p className="h5 p-2 mb-4"
+          <p className="h5 p-2 mb-4 font500"
             style={{backgroundColor: "#ffcccb", borderRadius: "8px", fontSize: "130%"}}
             hidden={this.state.hideError}>
               Whoops! The form did not submit successfully. <br></br>
@@ -213,8 +210,12 @@ render() {
                             <option>Family</option>
                             <option>Portraits</option>
                             <option>Engagements</option>
-                            <option>Bridals</option>
-                            <option>Wedding Package</option>
+                            <option>Bridals (Photo)</option>
+                            <option>Wedding Package (Photo)</option>
+                            <option>Bridals (Video)</option>
+                            <option>Wedding Package (Video)</option>
+                            <option>Premium Wedding Package (Video)</option>
+
                         </Input>
                         <FormFeedback invalid>Select the type of session you'd like</FormFeedback>
                     </FormGroup>
@@ -232,24 +233,24 @@ render() {
                             invalid={this.state.requested_dateInvalid}
                         />
                         <FormFeedback invalid>Pick a proper date</FormFeedback>
-                        <FormText>The date you wish to take pictures on.**</FormText>
+                        <FormText className='ml-1'>Your prefered date for the session**</FormText>
                     </FormGroup>
                 </Col>
             </Row>
 
             <FormGroup controlId="formBasicMessage">
-              <Label className="text-muted">Details</Label>
+              <Label className="text-muted">Location & Details</Label>
               <Input
                 type="textarea"
                 name="message"
                 className="text-default"
-                placeholder="Let us know the details of your event"
+                placeholder="Session location and other details"
                 value={this.state.message}
                 onChange={this.handleChange.bind(this, 'message')}
               />
             </FormGroup>
 
-            <Button variant="primary" type="submit">Submit</Button>
+            <Button variant="primary" className="btn btn-warning mt-3" style={{width:"25%"}} type="submit">Submit</Button>
           </Form>
         </div>
       </>
