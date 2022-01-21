@@ -75,7 +75,7 @@ validateInput(name, email, requested_date, type){
     }
 
     //Validate Type
-    if(type === "Family" || type === "Portraits" || type === "Engagements" || type === "Bridals (Photo)" || type === "Wedding Package (Photo)" || type === "Bridals (Video)" || type === "Wedding Package (Video)" || type === "Premium Wedding Package (Video)"){
+    if(type === "Family" || type === "Portraits" || type === "Engagements" || type === "Bridals (Photo)" || type === "Wedding Package (Photo)" || type === "Bridals (Video)" || type === "Wedding Package (Video)" || type === "Premium Wedding Package (Video)" || type === "Graduation"){
         typeValid = true;
         this.setState({ typeValid: true })
         this.setState({typeInvalid: false})
@@ -115,12 +115,18 @@ handleSubmit(e) {
             'template_rqa3wfz',
              templateParams,
             'user_YNJsHSOXIRFNqGJlb9OmK'
-           ).then(() => {this.setState({hideError: true})
-                        this.setState({hideSuccess: false})})
-           .then(() => {this.resetForm()})
-           .catch(() => {this.setState({hideError: false})
-                        this.setState({hideSuccess: true});
-                        this.resetForm()});
+           ).then(() => {
+                this.setState({hideError: true});
+                this.setState({hideSuccess: false});
+                this.props.setSuccessModal(true);
+            }).then(() => {
+                this.resetForm()
+            }).catch(() => {
+                this.setState({hideError: false})
+                this.setState({hideSuccess: true});
+                this.props.setErrorModal(true);
+                this.resetForm()
+            });
     }
 
  }
@@ -151,7 +157,7 @@ render() {
     return (
       <>
         <div>
-          <p className="h5 p-2 mb-4 font500"
+          {/* <p className="h5 p-2 mb-4 font500"
             style={{backgroundColor: "#ddffdd", borderRadius: "8px", fontSize: "130%"}}
             hidden={this.state.hideSuccess}>
               Form submitted successfully! We'll get back to you very soon. <br></br>
@@ -162,7 +168,7 @@ render() {
             hidden={this.state.hideError}>
               Whoops! The form did not submit successfully. <br></br>
               Send us an email at <i>ostlerfilmandphoto@gmail.com</i> with the details of your photo shoot.
-          </p>
+          </p> */}
           <Form onSubmit={this.handleSubmit.bind(this)}>
             <FormGroup controlId="formBasicEmail">
               <Label className="text-muted">Email address</Label>
@@ -207,14 +213,16 @@ render() {
                             invalid={this.state.typeInvalid}
                         >
                             <option>Select</option>
-                            <option>Family</option>
-                            <option>Portraits</option>
                             <option>Engagements</option>
                             <option>Bridals (Photo)</option>
                             <option>Wedding Package (Photo)</option>
                             <option>Bridals (Video)</option>
                             <option>Wedding Package (Video)</option>
                             <option>Premium Wedding Package (Video)</option>
+                            <option>Family</option>
+                            <option>Portraits</option>
+                            <option>Graduation </option>
+
 
                         </Input>
                         <FormFeedback invalid>Select the type of session you'd like</FormFeedback>

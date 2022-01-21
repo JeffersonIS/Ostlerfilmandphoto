@@ -58,11 +58,13 @@ function GalleryPageContent() {
         });
   } else { //if a session has been clicked, this determines its HTML
     //get the specific session clicked
-    let photos = galleryData[activeTab][displayedSession].photos;
-    galleryHTML = <div>
-                    <div className="h3 pb-3">{galleryData[activeTab][displayedSession].name}</div>
-                    <Photos photos={ photos } />
-                  </div>
+    if(showPhotoGallery){
+      let photos = galleryData[activeTab][displayedSession].photos;
+      galleryHTML = <div>
+                      <div className="h3 pb-3">{galleryData[activeTab][displayedSession].name}</div>
+                      <Photos photos={ photos } />
+                    </div>  
+    }
   }
 
 
