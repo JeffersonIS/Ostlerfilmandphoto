@@ -1,7 +1,7 @@
 const videoPricingData = [
     {
         title: "Bridals/First Look",
-        price: "$450",
+        price: "$400",
         salePrice: "",
         detailItems: [
             "3-5 min bridal video",
@@ -11,7 +11,7 @@ const videoPricingData = [
         ]},
     {
         title: "Wedding Package",
-        price: "$550",
+        price: "$600",
         salePrice: "",
         detailItems: [
             "5-7 min highlight video",
@@ -21,7 +21,7 @@ const videoPricingData = [
         ]},
     {
         title: "Premium Wedding Package",
-        price: "starting at $900",
+        price: "$1000",
         salePrice: "",
         detailItems: [
             "3-5 min bridal video",

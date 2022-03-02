@@ -11,7 +11,7 @@ import PhotoVideoToggle from "./PhotoVideoToggle";
 
 
 function PricingPageContent(props){
-    const [showPhotoData, setShowPhotoData] = React.useState(true);
+    const [showPhotoData, setShowPhotoData] = React.useState(false);
     let pricingData;
 
     showPhotoData ? pricingData = photoPricingData : pricingData = videoPricingData;

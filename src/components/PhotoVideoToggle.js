@@ -11,6 +11,16 @@ function PhotoVideoToggle(props) {
         <Col>
 
          <ButtonGroup className="toggle ">
+
+         <div className="button-toggle">
+                <input type="radio" id="video" name="pricing" 
+                    checked={!props.showPhotoData}
+                    onChange={(e) => props.onChange(!e.currentTarget.value)}
+                    ></input>
+                <label className="button-toggle-right" htmlFor="video">
+                    <FaVideo className="mr-2 "></FaVideo>Video</label>
+            </div>
+             
             <div className="button-toggle">
                 <input type="radio" id="photo" name="pricing" 
                     checked={props.showPhotoData}
@@ -20,14 +30,6 @@ function PhotoVideoToggle(props) {
                     <FaCameraRetro className="mr-2"></FaCameraRetro>Photo</label>
             </div>
 
-            <div className="button-toggle">
-                <input type="radio" id="video" name="pricing" 
-                    checked={!props.showPhotoData}
-                    onChange={(e) => props.onChange(!e.currentTarget.value)}
-                    ></input>
-                <label className="button-toggle-right" htmlFor="video">
-                    <FaVideo className="mr-2 "></FaVideo>Video</label>
-            </div>
 
          </ButtonGroup>
 
