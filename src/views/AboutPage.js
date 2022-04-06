@@ -16,7 +16,6 @@ function AboutPage() {
 
   return (
     <div>
-      <IndexNavbar />
       <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_8023_l0pTznAvLc8o.jpg?updatedAt=1641597903225"/>
       <AboutPageContent />
     </div>

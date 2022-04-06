@@ -31,13 +31,17 @@ import GalleryPage from "views/GalleryPage.js";
 import PricingPage from "views/PricingPage.js";
 import AboutPage from "views/AboutPage.js";
 import ContactPage from "views/ContactPage.js";
+import DemoFooter from "components/Footers/DemoFooter";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 
 
 
 // others
 
 ReactDOM.render(
-  <HashRouter>
+  <>
+  <IndexNavbar/>
+    <HashRouter>
     <Switch>
       <Route  path="/gallery" render={(props) => <GalleryPage {...props} />}/>
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
@@ -45,6 +49,8 @@ ReactDOM.render(
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>
-  </HashRouter>,
+  </HashRouter>
+  <DemoFooter/>
+  </>,
   document.getElementById("root")
 );

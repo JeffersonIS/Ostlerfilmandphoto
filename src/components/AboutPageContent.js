@@ -46,7 +46,6 @@ function AboutPageContent(props){
                 </div>
             </Container>
             </div>
-            <DemoFooter />
         </>
         );
 }

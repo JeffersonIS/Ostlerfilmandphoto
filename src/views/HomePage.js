@@ -39,9 +39,7 @@ function Index() {
 
   return (
     <>
-      <IndexNavbar />
       <LandingPageHeader />
-
     </>
   );
 }

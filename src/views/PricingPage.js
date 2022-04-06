@@ -16,7 +16,6 @@ function PricingPage() {
 
   return (
     <div>
-      <IndexNavbar />
       <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Engagements/TheEvans/IMG_5576_cfBsK4pyT.jpg"/>
       <PricingPageContent />
     </div>

@@ -1,0 +1,58 @@
+import React from "react";
+import { BiCalendarAlt, BiDetail, BiSend } from "react-icons/bi";
+import { Row, Col } from "reactstrap";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import 'components/componentStyle.css'
+
+function ContactNavToggle(props) {
+    let tabs = [false, false, false];
+    tabs[props.activeTab] = true;
+
+  return(
+    <Row className="mt-5">
+        <Col className="toggle-container">
+            <ButtonGroup className="toggle contact-toggle">
+                <div className="button-toggle">
+                    <input type="radio" id="video" name="form" 
+                        checked={tabs[0]}
+                        onChange={() => props.onChange(0)}
+                        ></input>
+                    <label className="button-toggle-right" htmlFor="video">
+                        <BiCalendarAlt className="mr-2"></BiCalendarAlt>
+                        <span className="contact-toggle-text-bigWidth">Choose Date</span>
+                        <span className="contact-toggle-text-smallWidth">Date</span>
+                    </label>
+                </div>
+                
+                <div className="button-toggle">
+                    <input type="radio" id="photo" name="form" 
+                        checked={tabs[1]}
+                        onChange={() => props.onChange(1)}
+                        ></input>
+                    <label className="button-toggle-middle" htmlFor="photo">
+                        <BiDetail className="mr-2"></BiDetail>
+                        <span className="contact-toggle-text-bigWidth">Enter Details</span>
+                        <span className="contact-toggle-text-smallWidth">Details</span>
+
+                    </label>
+                </div>
+
+                <div className="button-toggle">
+                    <input type="radio" id="review" name="form" 
+                        checked={tabs[2]}
+                        onChange={() => props.onChange(2)}
+                        ></input>
+                    <label className="button-toggle-left" htmlFor="review">
+                        <BiSend className="mr-2"></BiSend>
+                        <span className="contact-toggle-text-bigWidth">Review & Send</span>
+                        <span className="contact-toggle-text-smallWidth">Send</span>
+
+                    </label>
+                </div>
+            </ButtonGroup>
+        </Col>
+    </Row>
+  );
+}
+
+export default ContactNavToggle;

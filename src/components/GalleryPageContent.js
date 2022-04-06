@@ -76,7 +76,6 @@ function GalleryPageContent() {
   if(!showPhotoGallery){
     if(displayedSession === "none"){
       //display all video sessions for the specified tab
-      console.log(galleryData)
         galleryHTML = galleryData?.map((item) => {
             return(<VideoCard item={item} onClick={handleSelectSession} key={item.sessionID} />)
           });
@@ -138,7 +137,6 @@ function GalleryPageContent() {
           <BookNowButton></BookNowButton>
         </Container>
       </div>
-      <DemoFooter />
     </>
   );
 }

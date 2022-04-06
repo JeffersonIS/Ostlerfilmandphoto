@@ -8,11 +8,10 @@ import 'components/componentStyle.css'
 function PhotoVideoToggle(props) {
     return(
         <Row className="mt-5">
-        <Col>
+        <Col className="toggle-container">
 
          <ButtonGroup className="toggle ">
-
-         <div className="button-toggle">
+            <div className="button-toggle">
                 <input type="radio" id="video" name="pricing" 
                     checked={!props.showPhotoData}
                     onChange={(e) => props.onChange(!e.currentTarget.value)}
@@ -29,8 +28,6 @@ function PhotoVideoToggle(props) {
                 <label className="button-toggle-left" htmlFor="photo">
                     <FaCameraRetro className="mr-2"></FaCameraRetro>Photo</label>
             </div>
-
-
          </ButtonGroup>
 
         

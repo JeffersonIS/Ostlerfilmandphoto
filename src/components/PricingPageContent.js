@@ -141,7 +141,6 @@ function PricingPageContent(props){
                     </div> */}
                 </Container>
             </div>
-            <DemoFooter />
         </>
         );
 }
