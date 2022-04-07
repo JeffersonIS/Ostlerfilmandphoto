@@ -34,7 +34,7 @@ class ContactForm extends Component {
           locationInvalid: '',
           hideSuccess: true,
           hideError: true,
-          activeTab: 2,
+          activeTab: 0,
           showTimeInput: false,
           timeErrorMessage: '',
           dateErrorMessage: '',
@@ -277,7 +277,7 @@ render() {
                     <span>Send</span>
                     </Button>
                     <br></br>
-                    <Label className='mt-2'>Once you send the inquiry, we'll reach out shortly.</Label>
+                    <Label className='mt-2'>We'll reach out shortly once you send the inquiry.</Label>
                   </>
 
               )}
