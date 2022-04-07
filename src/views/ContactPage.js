@@ -6,7 +6,7 @@ import PageTitle from "components/PageTitle";
 import ContactMethods from "components/ContactForm/ContactMethods.js";
 import SuccessModal from "components/ContactForm/SuccessModal.js";
 import ErrorModal from "components/ContactForm/ErrorModal.js";
-import Calendar from "components/ContactForm/Calendar.js";
+import DemoFooter from "components/Footers/DemoFooter";
 
 
 function ContactPage() {
@@ -39,7 +39,7 @@ function ContactPage() {
 
           </Container>
       </div>
-      {/* <Calendar/> */}
+      <DemoFooter/>
     </div>
   );
 }

@@ -20,6 +20,7 @@ import React from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import ShortPageHeader from "components/Headers/ShortPageHeader.js";
 import GalleryPageContent from "components/GalleryPageContent.js";
+import DemoFooter from "components/Footers/DemoFooter";
 
 function GalleryPage() {
 
@@ -35,6 +36,7 @@ function GalleryPage() {
     <div>
       <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Portraits_Family/TheOstlers/IMG_8662_VZhCIaiFRXP.jpg?updatedAt=1641590082668"/>
       <GalleryPageContent/>
+      <DemoFooter/>
     </div>
   );
 }

@@ -50,7 +50,6 @@ ReactDOM.render(
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>
   </HashRouter>
-  <DemoFooter/>
   </>,
   document.getElementById("root")
 );
