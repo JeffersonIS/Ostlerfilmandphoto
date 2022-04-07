@@ -78,8 +78,8 @@ function IndexNavbar() {
         <div className="navbar-translate">
           <div className="text-center brand-logo" >
             <a href="/#/" title="Company Name">
-            {showWhiteLogo && (<WhiteLogoIcon width={70} height={70}/>)}
-            {!showWhiteLogo && (<GreyLogoIcon  width={70} height={70}/>)}
+            {showWhiteLogo && (<WhiteLogoIcon className="white-svg" width={60} height={60}/>)}
+            {!showWhiteLogo && (<GreyLogoIcon className="grey-svg"  width={60} height={60}/>)}
             </a>
           </div>
           <button

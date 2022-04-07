@@ -13,14 +13,14 @@ class ContactForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-          name: '',
-          email: '',
-          otherDetails: '',
-          requested_date: '',
+          name: 'Jefferson Ostler',
+          email: 'jefferson.ostler@gmail.com',
+          otherDetails: 'dddddd ddd dddd ddddddddddddd dddd ddddddddddd dddddddddd dddddddddddddddd dddddd d dddd ddd dddddddddddddddddddd',
+          requested_date: 'somee date @ 2:00 pm',
           date_start_str: '',
           date_end_str: '',
           time: '',
-          type: '',
+          type: 'Bridals (Photos) .... k',
           location: '',
           nameValid: '',
           nameInvalid: '',
@@ -34,7 +34,7 @@ class ContactForm extends Component {
           locationInvalid: '',
           hideSuccess: true,
           hideError: true,
-          activeTab: 0,
+          activeTab: 2,
           showTimeInput: false,
           timeErrorMessage: '',
           dateErrorMessage: '',
@@ -104,7 +104,7 @@ render() {
         {this.state.activeTab === 0 && (
           <>
             <p className='text-center text-muted'>Pick a date and time below</p>
-            <Row className='mt-4'>
+            <Row className='mt-2'>
               <Col sm={8}>
                 <Calendar 
                   requested_date={this.state.requested_date} 
@@ -122,8 +122,7 @@ render() {
                    <div className='mt-4 pl-3'>
                     <FormGroup controlId="formTime">
                       <Label className="text-muted font500">Approx. Start Time <span className='pl-2 error-message'>{this.state.timeErrorMessage}</span></Label>
-                      <TimePicker id='timepick' start="7:00" end="22:00" step={30} onChange={(e) => this.handleTimeChange(e)} value={this.state.time}  />
-                      <FormFeedback invalid>Select the type of session you'd like to book</FormFeedback>
+                      <TimePicker id='timepick' start="7:00" end="22:00" step={30} onChange={(e) => this.handleTimeChange(e)} value={this.state.time} />
                     </FormGroup>
                    <Button outline color="info" onClick={(e) => this.handleShowTimeInput(e)} value={false}>I actually don't know the time</Button>
                    </div>)
@@ -165,7 +164,7 @@ render() {
                         value={this.state.name}
                         className="text-default"
                         onChange={this.handleChange.bind(this, 'name')}
-                        placeholder="First & Last name"
+                        placeholder="First & Last"
                         valid={this.state.nameValid}
                         invalid={this.state.nameInvalid}
                     />
@@ -181,7 +180,7 @@ render() {
                     value={this.state.email}
                     className="text-default"
                     onChange={this.handleChange.bind(this, 'email')}
-                    placeholder="Enter email"
+                    placeholder="Email"
                     valid={this.state.emailValid}
                     invalid={this.state.emailInvalid}
                   />
@@ -225,7 +224,7 @@ render() {
                     type="text"
                     name="location"
                     className="text-default"
-                    placeholder="Location of the event/session"
+                    placeholder="Location"
                     value={this.state.location}
                     valid={this.state.locationValid}
                     invalid={this.state.locationInvalid}
@@ -241,7 +240,7 @@ render() {
                 type="textarea"
                 name="other-details"
                 className="text-default"
-                placeholder="Other details you want us to know"
+                placeholder="Other details"
                 value={this.state.otherDetails}
                 onChange={this.handleChange.bind(this, 'otherDetails')}
               />
@@ -265,7 +264,7 @@ render() {
             <div className='text-right'>
               {this.state.submitting 
                 ? (
-                  <Button variant="primary" className="btn btn-warning mt-5" style={{width:"20%"}} type="submit" >
+                  <Button variant="primary" className="btn btn-warning contact-advance-btn mt-3" style={{width:"20%"}} type="submit" >
                       <svg class="circular-loader"viewBox="25 25 50 50" >
                         <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke-width="6" />
                       </svg>
@@ -273,9 +272,14 @@ render() {
 
                   )
                 : (
-                  <Button variant="primary" className="btn btn-warning mt-5" style={{width:"20%"}} type="submit" >
+                  <>
+                    <Button variant="primary" className="btn btn-warning contact-advance-btn mt-3"  type="submit" >
                     <span>Send</span>
-                  </Button>
+                    </Button>
+                    <br></br>
+                    <Label className='mt-2'>Once you send the inquiry, we'll reach out shortly.</Label>
+                  </>
+
               )}
             </div>
           </>

@@ -35,7 +35,7 @@ function Calendar(props) {
         if (selectInfo.startStr) {
             calendarApi.addEvent({
                 id: REQUESTED_ID,
-                title: 'Requested Date',
+                title: '',
                 start: selectInfo.startStr,
                 end: '',
                 allDay: true,
@@ -71,7 +71,7 @@ function Calendar(props) {
         if(events.length === 0 && props.startStr !== ''){
             calendarApi.addEvent({
                 id: createEventId(),
-                title: 'Requested Date',
+                title: '',
                 start: props.startStr,
                 end: props.endStr,
                 allDay: true,
