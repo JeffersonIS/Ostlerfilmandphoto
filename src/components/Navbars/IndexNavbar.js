@@ -29,9 +29,13 @@ import {
   Nav,
   Container,
 } from "reactstrap";
+import "../../components/componentStyle.css"
+import {ReactComponent as WhiteLogoIcon} from '../../assets/img/white-logo.svg'
+import {ReactComponent as GreyLogoIcon} from '../../assets/img/grey-logo.svg'
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+  const [showWhiteLogo, setShowWhiteLogo] = React.useState(true);
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
   const [marginTopValue, setMarginTopValue] = React.useState("-25px")
 
@@ -48,12 +52,14 @@ function IndexNavbar() {
       ) {
         setMarginTopValue("0px")
         setNavbarColor("");
+        setShowWhiteLogo(false);
       } else if (
         document.documentElement.scrollTop < 131 ||
         document.body.scrollTop < 131
       ) {
         setNavbarColor("navbar-transparent");
-        setMarginTopValue("-25px")
+        setMarginTopValue("-25px");
+        setShowWhiteLogo(true);
       }
     };
 
@@ -70,17 +76,12 @@ function IndexNavbar() {
 
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand
-            data-placement="bottom"
-            href="/#/"
-            title="Company Name"
-          >
-             {/* <img src={white_logo} className="m-0 p-0" style={{height:"10em", width:"10em"}}></img> */}
-          <div className="text-center">
-            <i className="nc-icon nc-camera-compact" style={{opacity:".7"}}></i>
-              <p style={{fontSize:"85%"}} className="ml-2 mb-0"> Ostler Film & Photo</p>
+          <div className="text-center brand-logo" >
+            <a href="/#/" title="Company Name">
+            {showWhiteLogo && (<WhiteLogoIcon width={70} height={70}/>)}
+            {!showWhiteLogo && (<GreyLogoIcon  width={70} height={70}/>)}
+            </a>
           </div>
-          </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
             className={classnames("navbar-toggler navbar-toggler", {
