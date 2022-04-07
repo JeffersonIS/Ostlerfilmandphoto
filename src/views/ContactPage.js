@@ -7,6 +7,7 @@ import ContactMethods from "components/ContactForm/ContactMethods.js";
 import SuccessModal from "components/ContactForm/SuccessModal.js";
 import ErrorModal from "components/ContactForm/ErrorModal.js";
 import DemoFooter from "components/Footers/DemoFooter";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 
 
 function ContactPage() {
@@ -23,6 +24,7 @@ function ContactPage() {
 
   return (
     <div>
+      <IndexNavbar/>
       <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Family/TheMcBrides/IMG_6388_48tDvERzU.jpg"/>
       <div className="section profile-content">
           <Container className="contact-container">

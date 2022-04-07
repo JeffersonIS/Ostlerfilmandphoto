@@ -31,8 +31,6 @@ import GalleryPage from "views/GalleryPage.js";
 import PricingPage from "views/PricingPage.js";
 import AboutPage from "views/AboutPage.js";
 import ContactPage from "views/ContactPage.js";
-import DemoFooter from "components/Footers/DemoFooter";
-import IndexNavbar from "components/Navbars/IndexNavbar";
 
 
 
@@ -40,7 +38,6 @@ import IndexNavbar from "components/Navbars/IndexNavbar";
 
 ReactDOM.render(
   <>
-  <IndexNavbar/>
     <HashRouter>
     <Switch>
       <Route  path="/gallery" render={(props) => <GalleryPage {...props} />}/>

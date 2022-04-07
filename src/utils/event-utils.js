@@ -8,8 +8,6 @@ export function createEventId() {
 }
 
 export function getGoogleCalEvents(setEvents, calendarApi){
-  console.log('getting cal events')
-
   const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${GOOGLE_API_KEY}`;
 
   return fetch(url).then(
@@ -20,7 +18,6 @@ export function getGoogleCalEvents(setEvents, calendarApi){
   function extractEvents(events, setEvents, calendarApi){
     let newEvents = [];
     events.map((e) => {
-      console.log(e)
       let start = e.start.dateTime?.substring(0,10) ?? e.start.date?.substring(0,10);
       let end = e.end.dateTime?.substring(0,10) ?? e.end.date?.substring(0,10);
 
@@ -33,9 +30,7 @@ export function getGoogleCalEvents(setEvents, calendarApi){
         backgroundColor: 'lightgrey'
       });
 
-
        if(start !== end){
-      
         let dateToAdd = start;
         let tomorrow;
         while (dateToAdd !== end){

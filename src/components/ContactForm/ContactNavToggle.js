@@ -9,15 +9,15 @@ function ContactNavToggle(props) {
     tabs[props.activeTab] = true;
 
   return(
-    <Row className="mt-5">
+    <Row >
         <Col className="toggle-container">
-            <ButtonGroup className="toggle contact-toggle">
+            <ButtonGroup className="toggle contact-toggle mb-2">
                 <div className="button-toggle">
                     <input type="radio" id="video" name="form" 
                         checked={tabs[0]}
                         onChange={() => props.onChange(0)}
                         ></input>
-                    <label className="button-toggle-right" htmlFor="video">
+                    <label htmlFor="video">
                         <BiCalendarAlt className="mr-2"></BiCalendarAlt>
                         <span className="contact-toggle-text-bigWidth">Choose Date</span>
                         <span className="contact-toggle-text-smallWidth">Date</span>
@@ -29,7 +29,7 @@ function ContactNavToggle(props) {
                         checked={tabs[1]}
                         onChange={() => props.onChange(1)}
                         ></input>
-                    <label className="button-toggle-middle" htmlFor="photo">
+                    <label htmlFor="photo">
                         <BiDetail className="mr-2"></BiDetail>
                         <span className="contact-toggle-text-bigWidth">Enter Details</span>
                         <span className="contact-toggle-text-smallWidth">Details</span>
@@ -42,7 +42,7 @@ function ContactNavToggle(props) {
                         checked={tabs[2]}
                         onChange={() => props.onChange(2)}
                         ></input>
-                    <label className="button-toggle-left" htmlFor="review">
+                    <label htmlFor="review">
                         <BiSend className="mr-2"></BiSend>
                         <span className="contact-toggle-text-bigWidth">Review & Send</span>
                         <span className="contact-toggle-text-smallWidth">Send</span>
