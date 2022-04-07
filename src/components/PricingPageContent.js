@@ -69,7 +69,7 @@ function PricingPageContent(props){
                 }}>
                 <PageTitle title="Pricing" />
 
-                    <div className="text-center pt-3 font500">
+                    <div className="text-center font500">
                             <PhotoVideoToggle
                                 onChange={setShowPhotoData}
                                 showPhotoData={showPhotoData}
