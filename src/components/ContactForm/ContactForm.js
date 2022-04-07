@@ -13,14 +13,14 @@ class ContactForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-          name: 'Jefferson Ostler',
-          email: 'jefferson.ostler@gmail.com',
-          otherDetails: 'dddddd ddd dddd ddddddddddddd dddd ddddddddddd dddddddddd dddddddddddddddd dddddd d dddd ddd dddddddddddddddddddd',
-          requested_date: 'somee date @ 2:00 pm',
+          name: '',
+          email: '',
+          otherDetails: '',
+          requested_date: '',
           date_start_str: '',
           date_end_str: '',
           time: '',
-          type: 'Bridals (Photos) .... k',
+          type: '',
           location: '',
           nameValid: '',
           nameInvalid: '',
