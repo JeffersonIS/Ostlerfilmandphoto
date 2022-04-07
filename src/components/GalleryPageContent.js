@@ -1,6 +1,7 @@
 import React from "react";
 import { NavItem, NavLink, Nav, Container, Row, Col} from "reactstrap";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import PageTitle from "./PageTitle";
 import PhotoCard from "components/PhotoCard.js"
 import Photos from "components/Photos.js";
 import PhotoVideoToggle from "./PhotoVideoToggle";
@@ -101,9 +102,8 @@ function GalleryPageContent() {
             style={{
               transform: "translate(0,-8em)",
            }}>
-          <div className="text-center">
-            <h1 style={{color:"white", marginBottom:"1.3em"}}>The Gallery</h1>
-          </div>
+            <PageTitle title="The Gallery" />
+
 
           {/*Toggle */}
           <div className="text-center mb-4 font500">

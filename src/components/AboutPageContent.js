@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col} from "reactstrap";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import Gallery from "react-photo-gallery";
+import PageTitle from "components/PageTitle";
 
 
 function AboutPageContent(props){
@@ -21,9 +22,8 @@ function AboutPageContent(props){
                 style={{
                     transform: "translate(0,-8em)",
                 }}>
-                <div className="text-center">
-                    <h1 style={{color:"white", marginBottom:"1.3em"}}>Meet Us</h1>
-                </div>
+                <PageTitle title="Meet Us" />
+
                 <div className="text-left pt-2">
                     <Row>
                         <Col md={7} className="pt-2 pl-5 pr-5">

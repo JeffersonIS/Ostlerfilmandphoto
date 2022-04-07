@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import PageTitle from "./PageTitle";
 import photoPricingData from "data/photoPricingData.js";
 import videoPricingData from "data/videoPricingData.js";
 import faqData from "data/faqData.js";
@@ -66,9 +67,8 @@ function PricingPageContent(props){
                 style={{
                     transform: "translate(0,-8em)",
                 }}>
-                <div className="text-center">
-                <h1 style={{color:"white"}}>Pricing</h1>
-                </div>
+                <PageTitle title="Pricing" />
+
                     <div className="text-center pt-3 font500">
                             <PhotoVideoToggle
                                 onChange={setShowPhotoData}
