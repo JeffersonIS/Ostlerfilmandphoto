@@ -62,9 +62,6 @@ handleDateChange = (day, selectInfo) => {
     date_end_str: selectInfo.endStr,
     dateErrorMessage: '',
   })
-  // this.setState({requested_date: formattedDate});
-  // this.setState({date_start_str: selectInfo.startStr});
-  // this.setState({date_end_str: selectInfo.endStr});
 }
 
 handleTimeChange(e) {
@@ -95,7 +92,7 @@ getNextTab = () => {
 render() {
     return (
       <Form onSubmit={this.handleSubmit.bind(this)}>
-        <div className='form-container'>
+        <div>
 
         <div className="text-center mb-2 font500" id='contactFormNavToggle'>
           <ContactNavToggle onChange={(e) => this.handleChangeTab(e)} activeTab={this.state.activeTab} />
@@ -277,7 +274,7 @@ render() {
                     <span>Send</span>
                     </Button>
                     <br></br>
-                    <Label className='mt-2'>We'll reach out shortly once you send the inquiry.</Label>
+                    <Label className='mt-2' style={{width: "85%"}}>Once you send an inquiry, you'll get a confirmation email, and then we'll reach out shortly.</Label>
                   </>
 
               )}
