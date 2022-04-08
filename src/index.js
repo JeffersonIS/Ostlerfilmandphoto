@@ -31,6 +31,7 @@ import GalleryPage from "views/GalleryPage.js";
 import PricingPage from "views/PricingPage.js";
 import AboutPage from "views/AboutPage.js";
 import ContactPage from "views/ContactPage.js";
+import ReviewPage from "views/ReviewPage.js";
 
 
 
@@ -44,6 +45,7 @@ ReactDOM.render(
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
       <Route  path="/about" render={(props) => <AboutPage {...props} />}/>
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
+      <Route  path="/review" render={(props) => <ReviewPage {...props} />}/>
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>
   </HashRouter>

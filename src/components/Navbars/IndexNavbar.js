@@ -121,6 +121,13 @@ function IndexNavbar() {
               >Contact
               </NavLink>
             </NavItem>
+            
+            <NavItem>
+              <NavLink
+                href="/#/review"
+              >Reviews
+              </NavLink>
+            </NavItem>
 
             <NavItem className="mr-5">
               <NavLink

@@ -27,7 +27,7 @@ function ContactPage() {
       <IndexNavbar/>
       <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Family/TheMcBrides/IMG_6388_48tDvERzU.jpg"/>
       <div className="section profile-content">
-          <Container className="contact-container">
+          <Container className="page-container">
 
               <PageTitle title="Contact" />
 
