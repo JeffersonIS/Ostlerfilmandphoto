@@ -34,41 +34,15 @@ import {ReactComponent as WhiteLogoIcon} from '../../assets/img/white-logo.svg'
 import {ReactComponent as GreyLogoIcon} from '../../assets/img/grey-logo.svg'
 
 function IndexNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [showWhiteLogo, setShowWhiteLogo] = React.useState(true);
+  const [navbarColor] = React.useState("");
+  const [showWhiteLogo] = React.useState(false);
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
-  const [marginTopValue, setMarginTopValue] = React.useState("-25px")
+  const [marginTopValue] = React.useState("0px");
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
   };
-
-  React.useEffect(() => {
-    const updateNavbarColor = () => {
-      if (
-        document.documentElement.scrollTop > 130 ||
-        document.body.scrollTop > 130
-      ) {
-        setMarginTopValue("0px")
-        setNavbarColor("");
-        setShowWhiteLogo(false);
-      } else if (
-        document.documentElement.scrollTop < 131 ||
-        document.body.scrollTop < 131
-      ) {
-        setNavbarColor("navbar-transparent");
-        setMarginTopValue("-25px");
-        setShowWhiteLogo(true);
-      }
-    };
-
-    window.addEventListener("scroll", updateNavbarColor);
-
-    return function cleanup() {
-      window.removeEventListener("scroll", updateNavbarColor);
-    };
-  });
 
   //Documentation Link: https://demos.creative-tim.com/paper-kit-react/#/documentation?ref=pkr-index-navbar}
   return (

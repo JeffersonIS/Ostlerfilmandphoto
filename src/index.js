@@ -25,16 +25,13 @@ import "bootstrap/scss/bootstrap.scss";
 import "assets/scss/paper-kit.scss?v=1.3.0";
 import "assets/demo/demo.css?v=1.3.0";
 // pages
-//import NucleoIcons from "views/NucleoIcons.js";
 import HomePage from "views/HomePage.js";
 import GalleryPage from "views/GalleryPage.js";
 import PricingPage from "views/PricingPage.js";
 import AboutPage from "views/AboutPage.js";
 import ContactPage from "views/ContactPage.js";
-
-
-
-// others
+import ReviewPage from "views/ReviewPage.js";
+import LeaveReviewPage from "views/LeaveReviewPage.js";
 
 ReactDOM.render(
   <>
@@ -44,6 +41,8 @@ ReactDOM.render(
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
       <Route  path="/about" render={(props) => <AboutPage {...props} />}/>
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
+      <Route  path="/review" render={(props) => <ReviewPage {...props} />}/>
+      <Route  path="/leave-review" render={(props) => <LeaveReviewPage {...props} />}/>
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>
   </HashRouter>
