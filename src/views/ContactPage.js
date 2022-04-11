@@ -9,7 +9,6 @@ import ErrorModal from "components/ContactForm/ErrorModal.js";
 import DemoFooter from "components/Footers/DemoFooter";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
-
 function ContactPage() {
   const [successModal, setSuccessModal]= React.useState(false);
   const [errorModal, setErrorModal]= React.useState(false);
@@ -25,11 +24,12 @@ function ContactPage() {
   return (
     <div>
       <IndexNavbar/>
+      {/* <IndexNavbarGrey/> */}
       <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Family/TheMcBrides/IMG_6388_48tDvERzU.jpg"/>
       <div className="section profile-content">
           <Container className="page-container">
 
-              <PageTitle title="Contact" />
+              <PageTitle title="Contact"/>
 
               <ContactForm setSuccessModal={setSuccessModal} setErrorModal={setErrorModal}/>
 

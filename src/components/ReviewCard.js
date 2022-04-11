@@ -1,28 +1,50 @@
-import React from "react";
+import React, {useState} from "react";
 import { Card,  CardText, CardBody, CardLink,
     CardTitle, CardSubtitle } from 'reactstrap';
 import 'components/componentStyle.css'
 import { getStars, 
     NAMEKEY, TYPEKEY, 
-    RATINGKEY, REVIEWKEY } from "../utils/review-utils";
+    RATINGKEY, REVIEWKEY, SHOWREVIEWKEY, 
+    MAXLENGTH, ANONYMOUSNAMEKEY } from "../utils/review-utils";
 
 
 function ReviewCard(props) {
-    let review = props.review
-    const ratingValue = props.count + 1;
-    const greyStars = 5 - Number(review[RATINGKEY]);
-    const stars = getStars(Number(review[RATINGKEY], greyStars));
+    const [seeMoreEnabled, setSeeMoreEnabled] = useState(false);
+    let review = props.review;
+    const stars = getStars(Number(review[RATINGKEY]));
+    const substringIndex = (review.Timestamp.lastIndexOf('/')) + 5;
 
     return(
-        <Card className="mt-3 font500" style={{maxWidth: '70%', display: 'inline-block'}}>
+        <Card className="mt-3 font500">
             <CardBody>
                 <CardTitle>
-                    <strong>{review[NAMEKEY]}</strong>
-                    <span style={{position: 'absolute', right: '1.5em'}}>{review.Timestamp.substring(0,9)}</span>
+                    {review[SHOWREVIEWKEY] === ANONYMOUSNAMEKEY
+                     ? (
+                        <strong>Anonymous</strong>
+                    ) : (
+                        <strong>{review[NAMEKEY]}</strong>
+                    )}
+                    <span className="review-timestamp">{review.Timestamp.substring(0,substringIndex)}</span>
                 </CardTitle>
-                <div style={{display: 'block'}}>{stars}</div>
-                <CardSubtitle style={{paddingTop: '5px'}}>{review[TYPEKEY]}</CardSubtitle>
-                <CardText className="mt-2 font500 text-left">{review[REVIEWKEY]}</CardText>
+                <div>{stars}</div>
+                <CardSubtitle className="pt-1"><p>{review[TYPEKEY]}</p></CardSubtitle>
+
+                <CardText className="mt-2 font500 text-left">
+                    {review[REVIEWKEY]?.length < MAXLENGTH
+                    ? (
+                        <span className="font500">{review[REVIEWKEY]}</span>) 
+                    : !seeMoreEnabled ? (
+                        <span className="font500">
+                            {review[REVIEWKEY].substring(0,MAXLENGTH)}...
+                            <span className="ml-1 review-see-more" onClick={() => setSeeMoreEnabled(true)}>read more</span>
+                        </span>) 
+                    : (
+                        <span className="font500">
+                            {review[REVIEWKEY]}
+                            <span className="ml-1 review-see-more" onClick={() => setSeeMoreEnabled(false)}>read less</span>
+                        </span>
+                    )}
+                </CardText>
             </CardBody>
         </Card>
   );

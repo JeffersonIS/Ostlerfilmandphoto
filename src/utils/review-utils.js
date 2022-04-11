@@ -1,11 +1,13 @@
 import { AiFillStar } from 'react-icons/ai';
-export const SHEETID = '1S7nX4mclsCt8hWmg9NPFQKeeB4-YflH-fHhlO_oNF_A';
+export const SHEETID = '1xTAFnhsTUApm4tQEreW5D_ckGZfK709bM3eZs0zIFnk';
 export const SHEETAPIKEY = 'AIzaSyDpkCqZoEk3Bc4Bax2Gmx9brGXoQiw0rgc';
 export const SHOWREVIEWKEY = 'Is it okay if we use your review on our website and in other media?';
-export const NAMEKEY = 'Enter first name';
-export const RATINGKEY = 'Rate your experience';
-export const TYPEKEY = 'Select type of session';
+export const NAMEKEY = 'Enter your name';
+export const RATINGKEY = 'Rate your experience with Ostler Film & Photo';
+export const TYPEKEY = 'Select type of session/service';
 export const REVIEWKEY = 'Write a review';
+export const ANONYMOUSNAMEKEY = 'Yes, but leave my name as anonymous'
+export const MAXLENGTH = 250;
 export const OPTIONS = {
     apiKey: SHEETAPIKEY,
     sheetId: SHEETID,
@@ -15,14 +17,35 @@ export const OPTIONS = {
   };
 const STARS = [1,2,3,4,5];
 
-export function getStars(goldStars, greyStars){
-    const starsHTML = STARS.map((i) => {
+export function getStars(goldStars){
+    const starsHTML = STARS.map((i, count) => {
         if(i <= goldStars){
-            return(<AiFillStar color='gold'/>)
+            return(<AiFillStar key={count} color='gold'/>)
         } else{
-            return(<AiFillStar color='grey'/>
+            return(<AiFillStar key={count} color='grey'/>
         )}
     });
 
     return starsHTML;
+}
+
+export function getReviewTotals(results, setReviewTotals) {
+    let total = 0;
+    let avgRating = 0;
+    results.map((result, count) => {
+        if(result[NAMEKEY]){
+            let rating = Number(result[RATINGKEY]);
+            total += rating;
+        }
+    });
+
+    avgRating = total/results.length;
+    setReviewTotals(
+        {
+            average: avgRating,
+            totalReviews: results.length,
+            avgStars: getStars(avgRating)
+        }
+    )
+    
 }

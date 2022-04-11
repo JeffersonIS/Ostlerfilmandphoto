@@ -176,6 +176,35 @@
 }
 
 .reviews-grid{
+  width: 60%;
+  display: grid;
+  margin: auto;
+}
+
+.review-see-more{
+  color: rgb(0, 98, 226);
+  font-size: 90%;
+}
+
+.review-see-more:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.review-leave-review-btn{
+  height: auto;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.review-timestamp{
+  position: absolute;
+  right: 1.5em;
+}
+
+.leave-review-container{
+  width: 100%;
+  height: 1500px;
 }
 
 /* LOADING ANIMATION */
@@ -317,14 +346,18 @@ stroke-linecap: round;
     margin-left: .6em;
   }
 
-    .card-style {
-      max-width: 60em;
-      max-height: 60em;
-    }
+  .card-style {
+    max-width: 60em;
+    max-height: 60em;
+  }
+
+  .reviews-grid{
+    width: 90%;
+  }
 
 
-    .video-iframe{
-      width: 350px;
-      height: 210px;
-    }
+  .video-iframe{
+    width: 350px;
+    height: 210px;
+  }
   }
