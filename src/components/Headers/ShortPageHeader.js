@@ -17,6 +17,7 @@
 
 */
 import React from "react";
+import "../componentStyle.css"
 
 // reactstrap components
 
@@ -43,7 +44,7 @@ function ShortPageHeader(props) {
   return (
     <div>
       <div
-        className="page-header page-header-xs"
+        className="page-header short-page-header-height"
         style={{
           backgroundImage:
             "url("+ imagePath + ")",

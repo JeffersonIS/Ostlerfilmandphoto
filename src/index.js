@@ -41,7 +41,7 @@ ReactDOM.render(
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
       <Route  path="/about" render={(props) => <AboutPage {...props} />}/>
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
-      <Route  path="/review" render={(props) => <ReviewPage {...props} />}/>
+      <Route  path="/reviews" render={(props) => <ReviewPage {...props} />}/>
       <Route  path="/leave-review" render={(props) => <LeaveReviewPage {...props} />}/>
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>

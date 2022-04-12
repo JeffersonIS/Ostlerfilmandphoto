@@ -1,3 +1,4 @@
+import { checkDateIfPast } from "./form-utils";
 let eventGuid = 0
 const GOOGLE_API_KEY = 'AIzaSyDHwem4VQagI9qV51fB_cJGg8sv_j1wtO4';
 const CALENDAR_ID = 'ostlerfilmandphoto@gmail.com';
@@ -17,34 +18,40 @@ export function getGoogleCalEvents(setEvents, calendarApi){
 
   function extractEvents(events, setEvents, calendarApi){
     let newEvents = [];
+
     events.map((e) => {
       let start = e.start.dateTime?.substring(0,10) ?? e.start.date?.substring(0,10);
       let end = e.end.dateTime?.substring(0,10) ?? e.end.date?.substring(0,10);
+      
+      let dateToCheck = new Date(`${end}T00:00:00`);
 
-      calendarApi.addEvent({
-        id: createEventId(),
-        start: start,
-        end: end,
-        allDay: true,
-        display: 'background',
-        backgroundColor: 'lightgrey'
-      });
+      //Check if the date is previous today's date
+      if(!checkDateIfPast(dateToCheck)){
+        calendarApi.addEvent({
+          id: createEventId(),
+          start: start,
+          end: end,
+          allDay: true,
+          display: 'background',
+          backgroundColor: 'lightgrey'
+        });
 
-       if(start !== end){
-        let dateToAdd = start;
-        let tomorrow;
-        while (dateToAdd !== end){
-          newEvents.push(dateToAdd);
+        if(start !== end){
+          let dateToAdd = start;
+          let tomorrow;
+          while (dateToAdd !== end){
+            newEvents.push(dateToAdd);
 
-          tomorrow = new Date(`${dateToAdd}T00:00:00`);
-          tomorrow.setDate(tomorrow.getDate() + 1);
-          dateToAdd = tomorrow;
-          dateToAdd = dateToAdd.toISOString().split('T')[0];
+            tomorrow = new Date(`${dateToAdd}T00:00:00`);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            dateToAdd = tomorrow;
+            dateToAdd = dateToAdd.toISOString().split('T')[0];
+          }
+        } else {
+            newEvents.push(start);
         }
-       } else {
-          newEvents.push(start);
-       }
-     })
+      }
+     });
 
     setEvents(newEvents);
   }

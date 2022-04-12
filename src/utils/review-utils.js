@@ -7,7 +7,7 @@ export const RATINGKEY = 'Rate your experience with Ostler Film & Photo';
 export const TYPEKEY = 'Select type of session/service';
 export const REVIEWKEY = 'Write a review';
 export const ANONYMOUSNAMEKEY = 'Yes, but leave my name as anonymous'
-export const MAXLENGTH = 250;
+export const MAXLENGTH = 450;
 export const OPTIONS = {
     apiKey: SHEETAPIKEY,
     sheetId: SHEETID,
@@ -32,6 +32,7 @@ export function getStars(goldStars){
 export function getReviewTotals(results, setReviewTotals) {
     let total = 0;
     let avgRating = 0;
+    let reviewsSuffix = '';
     results.map((result, count) => {
         if(result[NAMEKEY]){
             let rating = Number(result[RATINGKEY]);
@@ -40,9 +41,11 @@ export function getReviewTotals(results, setReviewTotals) {
     });
 
     avgRating = total/results.length;
+    results.length === 1 ? reviewsSuffix = '' : reviewsSuffix = 's'; 
     setReviewTotals(
         {
             average: avgRating,
+            reviewsSuffix: reviewsSuffix,
             totalReviews: results.length,
             avgStars: getStars(avgRating)
         }

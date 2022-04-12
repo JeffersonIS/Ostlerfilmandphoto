@@ -47,15 +47,15 @@ function IndexNavbar() {
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 130 ||
-        document.body.scrollTop > 130
+        document.documentElement.scrollTop > 80 ||
+        document.body.scrollTop > 80
       ) {
         setMarginTopValue("0px")
         setNavbarColor("");
         setShowWhiteLogo(false);
       } else if (
-        document.documentElement.scrollTop < 131 ||
-        document.body.scrollTop < 131
+        document.documentElement.scrollTop < 81 ||
+        document.body.scrollTop < 81
       ) {
         setNavbarColor("navbar-transparent");
         setMarginTopValue("-25px");
@@ -118,13 +118,13 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 href="/#/contact"
-              >Contact
+              >Book Now
               </NavLink>
             </NavItem>
             
             <NavItem>
               <NavLink
-                href="/#/review"
+                href="/#/reviews"
               >Reviews
               </NavLink>
             </NavItem>
@@ -132,7 +132,7 @@ function IndexNavbar() {
             <NavItem className="mr-5">
               <NavLink
                 href="/#/about"
-              >About
+              >Meet Us
               </NavLink>
             </NavItem>
 

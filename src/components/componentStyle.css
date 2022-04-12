@@ -29,6 +29,10 @@
   font-weight: bold;
 }
 
+.short-page-header-height{
+  min-height: 30vh;
+}
+
 
 .insta-link a{
   color:#fd5949;
@@ -332,6 +336,10 @@ stroke-linecap: round;
     margin: 0;
     padding: 0;
     padding-top: 1.5em;
+  }
+
+  .short-page-header-height{
+    min-height: 20vh;
   }
 
   .contact-review-col{

@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { INITIAL_EVENTS, createEventId, getGoogleCalEvents } from '../../utils/event-utils.js';
 import "components/componentStyle.css";
+import { checkDateIfPast } from 'utils/form-utils.js';
 
 function Calendar(props) {
     const [googleCalEvents, setGoogleCalEvents] = useState();
@@ -13,11 +14,13 @@ function Calendar(props) {
 
     //filter if the date is allowed to be selected
     const handleSelectAllow = (selectInfo) => {
-        let allowSelect = true
-        day = String(selectInfo.start)
+        let allowSelect = true;
+        day = String(selectInfo.start);
         if(day.substring(0,3) === "Sun"){
             allowSelect = false;
         }
+
+        allowSelect = !checkDateIfPast(selectInfo.start)
 
         //check if date is busy
         if(googleCalEvents.includes(selectInfo.startStr)){

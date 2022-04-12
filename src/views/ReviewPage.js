@@ -47,9 +47,9 @@ function ReviewPage() {
           <Container className="page-container">
             <PageTitle title="Reviews" /> 
             <div className="reviews-grid">
-            <Row className="mr-1 mt-1">
+            <Row className="mr-1 mt-2">
                     <Col>
-                    <span className="mr-2 font500 font120">{reviewTotals.totalReviews} Reviews</span>
+                    <span className="mr-2 font500 font120">{reviewTotals.totalReviews} Review{reviewTotals.reviewsSuffix}</span>
                     {showReviews && (
                       <div style={{fontSize: '12px'}}>{reviewTotals.avgStars} {reviewTotals.average} out of 5</div>
                     )}

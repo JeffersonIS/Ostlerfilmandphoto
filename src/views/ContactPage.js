@@ -25,11 +25,11 @@ function ContactPage() {
     <div>
       <IndexNavbar/>
       {/* <IndexNavbarGrey/> */}
-      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Family/TheMcBrides/IMG_6388_48tDvERzU.jpg"/>
+      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_8023_l0pTznAvLc8o.jpg?updatedAt=1641597903225"/>
       <div className="section profile-content">
           <Container className="page-container">
 
-              <PageTitle title="Contact"/>
+              <PageTitle title="Book Now"/>
 
               <ContactForm setSuccessModal={setSuccessModal} setErrorModal={setErrorModal}/>
 
