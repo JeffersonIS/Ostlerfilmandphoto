@@ -18,7 +18,7 @@
 */
 /*eslint-disable*/
 import React from "react";
-
+import "../componentStyle.css"
 // reactstrap components
 import { Row, Container } from "reactstrap";
 
@@ -27,16 +27,16 @@ function DemoFooter() {
     <footer className="footer footer-black footer-white" id="footer">
       <Container>
         <Row>
-          <nav className="footer-nav">
+          <nav className="footer-nav footer-nav-mobile">
             <ul>
-              <li>
-                <a href="/#/contact">
-                  Contact
-                </a>
-              </li>|
               <li>
                 <a href="/#/pricing" >
                   Pricing
+                </a>
+              </li>|
+              <li>
+                <a href="/#/contact">
+                Book Now
                 </a>
               </li>|
               <li>

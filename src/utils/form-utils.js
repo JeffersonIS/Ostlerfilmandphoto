@@ -175,6 +175,14 @@ export function formatDate(date){
     return date.substring(0, 15)
 }
 
+export function checkDateIfPast(dateToCheck){
+    let today = new Date();
+    if(dateToCheck <= today){
+        return true;
+    }
+    return false;
+}
+
 export function resetForm(setState) {
     setState({
         name: '',

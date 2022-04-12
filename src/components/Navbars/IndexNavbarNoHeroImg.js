@@ -92,13 +92,13 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 href="/#/contact"
-              >Contact
+              >Book Now
               </NavLink>
             </NavItem>
             
             <NavItem>
               <NavLink
-                href="/#/review"
+                href="/#/reviews"
               >Reviews
               </NavLink>
             </NavItem>
@@ -106,7 +106,7 @@ function IndexNavbar() {
             <NavItem className="mr-5">
               <NavLink
                 href="/#/about"
-              >About
+              >Meet Us
               </NavLink>
             </NavItem>
 

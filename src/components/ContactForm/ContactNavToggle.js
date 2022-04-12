@@ -18,9 +18,9 @@ function ContactNavToggle(props) {
                         onChange={() => props.onChange(0)}
                         ></input>
                     <label htmlFor="video">
-                        <BiCalendarAlt className="mr-2"></BiCalendarAlt>
-                        <span className="contact-toggle-text-bigWidth">Choose Date</span>
-                        <span className="contact-toggle-text-smallWidth">Date</span>
+                        {/* <BiCalendarAlt className="mr-2"></BiCalendarAlt> */}
+                        <span className="contact-toggle-text-bigWidth">1. Choose Date</span>
+                        <span className="contact-toggle-text-smallWidth">1. Date</span>
                     </label>
                 </div>
                 
@@ -30,9 +30,9 @@ function ContactNavToggle(props) {
                         onChange={() => props.onChange(1)}
                         ></input>
                     <label htmlFor="photo">
-                        <BiDetail className="mr-2"></BiDetail>
-                        <span className="contact-toggle-text-bigWidth">Enter Details</span>
-                        <span className="contact-toggle-text-smallWidth">Details</span>
+                        {/* <BiDetail className="mr-2"></BiDetail> */}
+                        <span className="contact-toggle-text-bigWidth">2. Enter Details</span>
+                        <span className="contact-toggle-text-smallWidth">2. Details</span>
 
                     </label>
                 </div>
@@ -43,9 +43,9 @@ function ContactNavToggle(props) {
                         onChange={() => props.onChange(2)}
                         ></input>
                     <label htmlFor="review">
-                        <BiSend className="mr-2"></BiSend>
-                        <span className="contact-toggle-text-bigWidth">Review & Send</span>
-                        <span className="contact-toggle-text-smallWidth">Send</span>
+                        {/* <BiSend className="mr-2"></BiSend> */}
+                        <span className="contact-toggle-text-bigWidth">3. Review & Send</span>
+                        <span className="contact-toggle-text-smallWidth">3. Send</span>
 
                     </label>
                 </div>
