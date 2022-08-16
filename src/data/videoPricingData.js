@@ -1,34 +1,25 @@
 const videoPricingData = [
     {
         title: "Bridals/First Look",
-        price: "$400",
+        price: "$800",
         salePrice: "",
         detailItems: [
-            "3-5 min bridal video",
-            "You pick the song",
-            "You pick the location",
+            "3-4 min bridal video",
+            "2 hours of coverage",
             "Posting rights",
+            "*This typically is filmed on a day before the wedding day and can be played during the reception if desired."
         ]},
     {
         title: "Wedding Package",
-        price: "$600",
+        price: "$1800",
         salePrice: "",
         detailItems: [
-            "5-7 min highlight video",
+            "6-8 min highlight video",
+            "8 hours of coverage",
             "Coverage of all wedding day activities",
-            "Wedding ceremony & reception",
             "Posting rights",
+            "Includes a small 'bridal' session if the couple desires (on the same day as the wedding).",
         ]},
-    {
-        title: "Premium Wedding Package",
-        price: "$1000",
-        salePrice: "",
-        detailItems: [
-            "3-5 min bridal video",
-            "5-7 min wedding-day highlight video",
-            "Coverage of all wedding day activities",
-            "Posting rights",
-    ]},
     ]
 
 export default videoPricingData;

@@ -6,6 +6,6 @@ import TheDaves from "./Portraits/TheDaves.js";
 import TheMcBrides from "./Portraits/TheMcBrides";
 import Emily from "./Portraits/Emily";
 
-const portraitsFamily =[TheMcBrides,TheOstlers,Emily,Millie,AmbersGraduation,MckayKirstenAnnelise,TheDaves];
+const portraitsFamily =[TheOstlers,Emily,Millie,AmbersGraduation,TheMcBrides,MckayKirstenAnnelise,TheDaves];
 
 export default portraitsFamily;
