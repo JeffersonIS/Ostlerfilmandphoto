@@ -200,15 +200,11 @@ render() {
                         invalid={this.state.typeInvalid}
                     >
                         <option>Select</option>
-                        <option>Engagements</option>
-                        <option>Bridals (Photo)</option>
-                        <option>Wedding Package (Photo)</option>
+                        <option>Family</option>
+                        <option>Senior & Grad </option>
+                        <option>Engagements/Bridals</option>
                         <option>Bridals (Video)</option>
                         <option>Wedding Package (Video)</option>
-                        <option>Premium Wedding Package (Video)</option>
-                        <option>Family</option>
-                        <option>Portraits</option>
-                        <option>Graduation </option>
 
                     </Input>
                     <FormFeedback invalid>Select the type of session you'd like to book</FormFeedback>

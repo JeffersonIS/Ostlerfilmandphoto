@@ -86,7 +86,7 @@ function validateSection2(setState, state){
 
     //Validate Type
     let type = state.type;
-    if(type === "Family" || type === "Portraits" || type === "Engagements" || type === "Bridals (Photo)" || type === "Wedding Package (Photo)" || type === "Bridals (Video)" || type === "Wedding Package (Video)" || type === "Premium Wedding Package (Video)" || type === "Graduation"){
+    if(type === "Family" || type === "Engagements/Bridals" || type === "Bridals (Video)" || type === "Wedding Package (Video)" || type === "Senior & Grad"){
         typeValid = true;
         setState({ typeValid: true })
         setState({typeInvalid: false})

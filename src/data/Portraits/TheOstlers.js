@@ -1,5 +1,5 @@
-const TheOstlers = {name:"The Ostlers",
-sessionID: "1",
+const TheOstlers = {name:"Harrison, Jerika & Co.",
+sessionID: "0",
 folderPath:"Portraits_Family/TheOstlers/",
 imgHeaderPath: "IMG_8707_-4Ctm4yftI.jpg?updatedAt=1641590071946",
 photos: [

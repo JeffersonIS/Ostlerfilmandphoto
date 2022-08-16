@@ -1,6 +1,6 @@
 
 const AmbersGraduation = {name:"Amber's Graduation",
-    sessionID: "6",
+    sessionID: "3",
     folderPath:"Portraits_Family/AmbersGraduation/",
     imgHeaderPath: "AmbersGraduation7_caw4Cuwfa.jpg",
     photos: [

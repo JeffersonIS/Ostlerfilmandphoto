@@ -1,5 +1,5 @@
 const TheDaves = {name:"The Daves",
-    sessionID: "5",
+    sessionID: "6",
     folderPath:"Portraits_Family/TheDaves/",
     imgHeaderPath: "TheDaves7_gP_OtgZcR.jpg",
     photos: [

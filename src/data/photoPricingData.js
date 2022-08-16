@@ -1,41 +1,31 @@
 const photoPricingData = [
     {
-        title: "Engagements",
-        price: "$200",
-        salePrice: "",
-        detailItems: [
-            "~60 min  session",
-            "40+ images",
-            "Printing and posting rights",
-            "You pick the location",
-        ]},
-    {
-        title: "Bridals",
+        title: "Senior & Grad",
         price: "$250",
         salePrice: "",
         detailItems: [
-            "~60 min  session",
-            "40+ images",
+            "60 min session",
+            "30+ images",
             "Printing and posting rights",
-            "You pick the location",
+            "Multiple outfits welcome",
         ]},
     {
-        title: "Wedding Package",
-        price: "starting at $1000",
+        title: "Family",
+        price: "$300",
         salePrice: "",
         detailItems: [
-            "All day wedding coverage (ceremony & reception)",
-            "Includes bridal session",
+            "60-90 min session",
+            "50+ images",
             "Printing and posting rights",
+            "Group and individual photos as requested"
         ]},
         {
-            title: "Family & Portraits",
-            price: "$200",
+            title: "Engagments/Bridals",
+            price: "$350",
             salePrice: "",
             detailItems: [
-                "60 min session",
-                "40+ images",
-                "Group and individual photos",
+                "~90 min session",
+                "50+ images",
                 "Printing and posting rights",
         ]},
     ]
