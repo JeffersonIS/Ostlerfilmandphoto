@@ -8,7 +8,7 @@ function BookNowButton(props) {
         <div className="text-center mt-1">
             <Row>
                 <Col>
-                    <a href="/#/contact">
+                    <a href="/contact">
                         <Button color="warning" type="button"
                             className="m-2 mt-5" style={{minWidth: "25em"}}>
                             Book Now

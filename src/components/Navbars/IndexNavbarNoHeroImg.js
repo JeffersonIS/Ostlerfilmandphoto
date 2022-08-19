@@ -51,7 +51,7 @@ function IndexNavbar() {
       <Container>
         <div className="navbar-translate">
           <div className="text-center brand-logo" >
-            <a href="/#/" title="Company Name">
+            <a href="/" title="Company Name">
             {showWhiteLogo && (<WhiteLogoIcon className="white-svg" width={60} height={60}/>)}
             {!showWhiteLogo && (<GreyLogoIcon className="grey-svg"  width={60} height={60}/>)}
             </a>
@@ -76,7 +76,7 @@ function IndexNavbar() {
           <Nav navbar>
             <NavItem>
               <NavLink
-                href="/#/gallery"
+                href="/gallery"
               >
                 Gallery
               </NavLink>
@@ -84,28 +84,28 @@ function IndexNavbar() {
 
             <NavItem>
               <NavLink
-                href="/#/pricing"
+                href="/pricing"
               >Pricing
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink
-                href="/#/contact"
+                href="/contact"
               >Book Now
               </NavLink>
             </NavItem>
             
             <NavItem>
               <NavLink
-                href="/#/reviews"
+                href="/reviews"
               >Reviews
               </NavLink>
             </NavItem>
 
             <NavItem className="mr-5">
               <NavLink
-                href="/#/about"
+                href="/about"
               >Meet Us
               </NavLink>
             </NavItem>
