@@ -56,7 +56,7 @@ function ReviewPage() {
 
                     </Col>
                     <Col style={{textAlign: 'right'}}>
-                      <a href="/#/leave-review">
+                      <a href="/leave-review">
                       <Button outline color="info" className="review-leave-review-btn">Leave Review</Button>
                       </a>
                     </Col>

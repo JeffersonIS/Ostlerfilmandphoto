@@ -18,7 +18,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, BrowserRouter, Route, Switch } from "react-router-dom";
 
 // styles
 import "bootstrap/scss/bootstrap.scss";
@@ -35,7 +35,7 @@ import LeaveReviewPage from "views/LeaveReviewPage.js";
 
 ReactDOM.render(
   <>
-    <HashRouter>
+    <BrowserRouter>
     <Switch>
       <Route  path="/gallery" render={(props) => <GalleryPage {...props} />}/>
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
@@ -45,7 +45,7 @@ ReactDOM.render(
       <Route  path="/leave-review" render={(props) => <LeaveReviewPage {...props} />}/>
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>
-  </HashRouter>
+  </BrowserRouter>
   </>,
   document.getElementById("root")
 );

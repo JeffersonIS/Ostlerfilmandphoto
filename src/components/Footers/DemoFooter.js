@@ -30,12 +30,12 @@ function DemoFooter() {
           <nav className="footer-nav footer-nav-mobile">
             <ul>
               <li>
-                <a href="/#/pricing" >
+                <a href="/pricing" >
                   Pricing
                 </a>
               </li>|
               <li>
-                <a href="/#/contact">
+                <a href="/contact">
                 Book Now
                 </a>
               </li>|
