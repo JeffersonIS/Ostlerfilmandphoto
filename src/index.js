@@ -37,7 +37,8 @@ ReactDOM.render(
   <>
     <BrowserRouter>
     <Switch>
-      <Route  path="/gallery" render={(props) => <GalleryPage {...props} />}/>
+      {/* <Route  path="/gallery/video/:id?" render={(props) => <GalleryVideoPage {...props} />}/> */}
+      <Route  path="/:type/:session?" render={(props) => <GalleryPage {...props} />}/>
       <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
       <Route  path="/about" render={(props) => <AboutPage {...props} />}/>
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
