@@ -5,7 +5,7 @@ import PricingPageContent from "components/PricingPageContent.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
 
-function PricingPage() {
+function PricingPage(props) {
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -19,7 +19,7 @@ function PricingPage() {
     <div>
       <IndexNavbar/>
       <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Kimber_Jonny1_Cy1dBU1aP?ik-sdk-version=javascript-1.4.3&updatedAt=1649700479709"/>
-      <PricingPageContent />
+      <PricingPageContent type={props.match.params?.type}/>
       <DemoFooter/>
     </div>
   );

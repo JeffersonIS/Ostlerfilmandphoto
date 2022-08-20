@@ -13,16 +13,16 @@ function PhotoVideoToggle(props) {
          <ButtonGroup className="toggle ">
             <div className="button-toggle">
                 <input type="radio" id="video" name="pricing" 
-                    checked={props.showPhotoData}
+                    checked={props.showVideoData}
                     onChange={(e) => props.onChange("video")}
                     ></input>
                 <label className="button-toggle-right" htmlFor="video">
                     <FaVideo className="mr-2 "></FaVideo>Video</label>
             </div>
-             
+
             <div className="button-toggle">
                 <input type="radio" id="photo" name="pricing" 
-                    checked={!props.showPhotoData}
+                    checked={!props.showVideoData}
                     onChange={(e) => props.onChange("photo")}
                     ></input>
                 <label className="button-toggle-left" htmlFor="photo">

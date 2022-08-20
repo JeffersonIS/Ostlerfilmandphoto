@@ -12,7 +12,7 @@ function PhotoCard(props) {
     return(
         <Card className="m-3"
             style={{cursor:"pointer", display:"inline-block"}}
-            onClick={ () => {props.onClick(item.sessionID)}}
+            onClick={ () => {props.onClick(Number(props.count))}}
             >
 
             <CardImg src={urlEndpoint + imagePath}

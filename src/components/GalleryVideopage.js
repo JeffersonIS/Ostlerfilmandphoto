@@ -28,7 +28,7 @@ function GalleryVideoPage(props) {
           </div>
         :
         <div className="text-center mb-5">
-            <span className="hover" onClick={() => {setShowAllVideos(true)}}>All Videos</span>
+            <span className="hover" onClick={() => {setShowAllVideos(true)}}>Back to videos</span>
             <div className="h3 pb-3">{videoGalleryData[currentVideoId].name}</div>
           <div>
             <iframe className="video-iframe" src={videoGalleryData[currentVideoId].src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="allowFullScreen"></iframe>
