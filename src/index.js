@@ -37,12 +37,13 @@ ReactDOM.render(
   <>
     <BrowserRouter>
     <Switch>
-      <Route  path="/gallery" render={(props) => <GalleryPage {...props} />}/>
-      <Route  path="/pricing" render={(props) => <PricingPage {...props} />}/>
+      {/* <Route  path="/gallery/video/:id?" render={(props) => <GalleryVideoPage {...props} />}/> */}
+      <Route  path="/pricing/:type" render={(props) => <PricingPage {...props} />}/>
       <Route  path="/about" render={(props) => <AboutPage {...props} />}/>
       <Route  path="/contact" render={(props) => <ContactPage {...props} />}/>
       <Route  path="/reviews" render={(props) => <ReviewPage {...props} />}/>
       <Route  path="/leave-review" render={(props) => <LeaveReviewPage {...props} />}/>
+      <Route  path="/gallery/:type/:session?" render={(props) => <GalleryPage {...props} />}/>
       <Route  path="/" render={(props) => <HomePage {...props} />}/>
     </Switch>
   </BrowserRouter>

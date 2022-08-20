@@ -102,7 +102,7 @@ function IndexNavbar() {
           <Nav navbar>
             <NavItem>
               <NavLink
-                href="/gallery"
+                href="/gallery/video"
               >
                 Gallery
               </NavLink>
@@ -110,7 +110,7 @@ function IndexNavbar() {
 
             <NavItem>
               <NavLink
-                href="/pricing"
+                href="/pricing/video"
               >Pricing
               </NavLink>
             </NavItem>

@@ -8,8 +8,7 @@ function VideoCard(props) {
     const item = props.item;
     return(
         <Card className="m-3 videocard-container"
-            onClick={ () => {props.onClick(item.sessionID)}}
-            >
+            onClick={ () => {props.onClick(props.id)}}>
 
             <CardImg src={item.imgPath}
             className="card-style"
