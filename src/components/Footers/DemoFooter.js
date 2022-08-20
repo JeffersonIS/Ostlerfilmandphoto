@@ -47,7 +47,7 @@ function DemoFooter() {
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/ostlerfilmandphoto"
+                <a href="https://www.instagram.com/jeffersonostlerfilms"
                   title="Follow us on Instagram"
                   target="_blank">
                    <i className="fa fa-instagram" />

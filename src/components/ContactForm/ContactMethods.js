@@ -13,13 +13,13 @@ function ContactMethods(props){
                 Message us directly and follow us on social media or send us an email.
             </p>
             <div className="mb-3">
-                <p className="font500">@ostlerfilmandphoto</p>
-                <p className="font500">ostlerfilmandphoto@gmail.com</p>
+                <p className="font500">@jeffersonostlerfilms</p>
+                <p className="font500">jeffersonostlerfilms@gmail.com</p>
             </div>
 
             <Row className="text-center pt-4">
                 <Col className="insta-link">
-                    <a href="https://www.instagram.com/ostlerfilmandphoto"
+                    <a href="https://www.instagram.com/jeffersonostlerfilms"
                             title="Follow us on Instagram"
                             target="_blank">
                         <FaInstagram className="font600" ></FaInstagram>
