@@ -15,7 +15,7 @@ function BookNowButton(props) {
                         </Button>
                     </a>
                     {props.addNote ?
-                        <><br></br><small>Prices do not include travel costs</small></> :
+                        <><br></br><small>Prices do not include travel costs (see below)</small></> :
                         <></>}
                 </Col>
             </Row>

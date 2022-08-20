@@ -9,13 +9,22 @@ import { FcFeedback, FcPhone, FcCompactCamera, FcCollaboration, FcDiploma2 } fro
 import  BookNowButton  from "components/BookNowButton.js";
 import "components/componentStyle.css";
 import PhotoVideoToggle from "./PhotoVideoToggle";
+import { useHistory } from "react-router-dom"; 
 
 
 function PricingPageContent(props){
-    const [showPhotoData, setShowPhotoData] = React.useState(false);
     let pricingData;
+    let history = useHistory();  
+    let showVideoData;
 
-    showPhotoData ? pricingData = photoPricingData : pricingData = videoPricingData;
+    props.type === "video" ? showVideoData = true : showVideoData = false;
+  
+    const handleToggleChange = (event) => {
+        console.log(event)
+      history.replace(`/pricing/${event}`);
+    }
+  
+    showVideoData ? pricingData = videoPricingData : pricingData = photoPricingData;
 
     const pricingTableHTML = pricingData.map(item => {
         let pricingHTML;
@@ -71,8 +80,8 @@ function PricingPageContent(props){
 
                     <div className="text-center font500">
                             <PhotoVideoToggle
-                                onChange={setShowPhotoData}
-                                showPhotoData={showPhotoData}
+                                onChange={handleToggleChange}
+                                showVideoData={showVideoData}
                             ></PhotoVideoToggle>
                         <Row>
                         {pricingTableHTML}
