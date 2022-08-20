@@ -126,7 +126,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/ostlerfilmandphoto"
+                href="https://www.instagram.com/jeffersonostlerfilms"
                 title="Follow us on Instagram"
                 target="_blank"
               >

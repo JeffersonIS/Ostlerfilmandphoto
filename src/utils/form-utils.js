@@ -132,10 +132,13 @@ export function handleSubmitHelper(emailjs, setState, state, setSuccessModal, se
            }
 
             emailjs.send(
-            'service_7lkfjn8',
-            'template_rqa3wfz',
+            // 'service_7lkfjn8',
+            'service_008dq1y',
+            // 'template_rqa3wfz',
+            'template_pu0c2ml',
              templateParams,
-            'user_YNJsHSOXIRFNqGJlb9OmK'
+             '-23neNnyfJ4TEs6ey'
+            // 'user_YNJsHSOXIRFNqGJlb9OmK'
            ).then(() => {
                 setState({submitting: false})
                 setState({hideError: true});
