@@ -21,7 +21,8 @@ function ContactMethods(props){
                 <Col className="insta-link">
                     <a href="https://www.instagram.com/jeffersonostlerfilms"
                             title="Follow us on Instagram"
-                            target="_blank">
+                            target="_blank"
+                            rel="noreferrer">
                         <FaInstagram className="font600" ></FaInstagram>
                     </a>
 
@@ -32,7 +33,8 @@ function ContactMethods(props){
                 <Col>
                     <a href="https://www.facebook.com/Ostler-Film-and-Photo-104315925157843"
                         title="Follow us on Facebook"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                     <FaFacebookMessenger className="font600"></FaFacebookMessenger>
                         </a>
                 </Col>

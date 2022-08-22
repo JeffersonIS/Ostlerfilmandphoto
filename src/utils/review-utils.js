@@ -33,11 +33,12 @@ export function getReviewTotals(results, setReviewTotals) {
     let total = 0;
     let avgRating = 0;
     let reviewsSuffix = '';
-    results.map((result, count) => {
+    results.map((result) => {
         if(result[NAMEKEY]){
             let rating = Number(result[RATINGKEY]);
             total += rating;
         }
+        return null;
     });
 
     avgRating = total/results.length;

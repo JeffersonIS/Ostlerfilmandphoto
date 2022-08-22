@@ -35,7 +35,6 @@ export function getGoogleCalEvents(setEvents, calendarApi){
           display: 'background',
           backgroundColor: 'lightgrey'
         });
-
         if(start !== end){
           let dateToAdd = start;
           let tomorrow;
@@ -51,6 +50,7 @@ export function getGoogleCalEvents(setEvents, calendarApi){
             newEvents.push(start);
         }
       }
+      return null;
      });
 
     setEvents(newEvents);

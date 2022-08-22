@@ -1,6 +1,6 @@
 import React from "react";
 import { photoGalleryCategories } from "data/photoGalleryData.js";
-import { NavItem, NavLink, Nav, Container, Row, Col} from "reactstrap";
+import { NavItem, NavLink, Nav } from "reactstrap";
 import 'components/componentStyle.css';
 
 function GalleryPhotoSubMenu(props) {
