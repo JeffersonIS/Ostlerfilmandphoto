@@ -13,8 +13,8 @@ function GalleryVideoContent(props) {
   };
 
   React.useEffect(() => {
-    props.params.id ? setShowAllVideos(false) : console.log('muahah');
-  }, [])
+    props.params.id ? setShowAllVideos(false): console.log('');
+  }, [props.params.id])
 
   console.log('showall videos', showAllVideos);
 

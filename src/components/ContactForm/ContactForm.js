@@ -1,8 +1,8 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import * as emailjs from 'emailjs-com';
-import { resetForm, advanceForm, formatTime, formatDate, handleSubmitHelper } from '../../utils/form-utils';
+import { advanceForm, formatTime, formatDate, handleSubmitHelper } from '../../utils/form-utils';
 import "components/componentStyle.css"
-import { Button, FormFeedback, Form, FormGroup, FormText, Label, Input,
+import { Button, FormFeedback, Form, FormGroup, Label, Input,
         Col, Row } from 'reactstrap'
 import Calendar from './Calendar';
 import ContactNavToggle from './ContactNavToggle';

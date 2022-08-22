@@ -1,5 +1,4 @@
 import React from "react";
-import { BiCalendarAlt, BiDetail, BiSend } from "react-icons/bi";
 import { Row, Col } from "reactstrap";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import 'components/componentStyle.css'
