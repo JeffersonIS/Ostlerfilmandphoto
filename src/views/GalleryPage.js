@@ -6,7 +6,7 @@ import DemoFooter from "components/Footers/DemoFooter";
 import PageTitle from "components/PageTitle";
 import { Container } from "reactstrap"
 import PhotoVideoToggle from "components/PhotoVideoToggle";
-import GalleryVideoPage from "components/GalleryVideoPage";
+import GalleryVideoContent from "components/GalleryVideoContent";
 import GalleryPhotoPage from "components/GalleryPhotoPage";
 import { useHistory } from "react-router";
 
@@ -47,7 +47,7 @@ function GalleryPage(props) {
                 {/*Video Gallery */}
                 {showVideoGallery ? 
                   <div>
-                    <GalleryVideoPage params={props.match.params} />
+                    <GalleryVideoContent params={props.match.params} />
                   </div>
                   : 
                   <div>
