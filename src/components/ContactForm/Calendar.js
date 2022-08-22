@@ -82,7 +82,7 @@ function Calendar(props) {
                 backgroundColor: 'lightgreen'
             });
         }
-    }, []);
+    }, [calendarRef, googleCalEvents, props.startStr, props.endStr]);
       
 
 

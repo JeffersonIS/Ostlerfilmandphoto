@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import DemoFooter from "components/Footers/DemoFooter.js";
 import PageTitle from "./PageTitle";
 import photoPricingData from "data/photoPricingData.js";
 import videoPricingData from "data/videoPricingData.js";
-import faqData from "data/faqData.js";
 import { FcFeedback, FcPhone, FcCompactCamera, FcCollaboration, FcDiploma2 } from "react-icons/fc";
 import  BookNowButton  from "components/BookNowButton.js";
 import "components/componentStyle.css";

@@ -27,6 +27,8 @@ export function advanceForm(setState, state, tabNum) {
                 changeTab(setState, tabNum)
             }
             break;
+        default:
+            return;
       }
 }
 
@@ -170,8 +172,9 @@ export function formatTime(time) {
     let hour = Number(formattedTime.substring(0,2));
     let min = formattedTime.substring(3,5);
     let suffix = hour >= 12 ? "PM":"AM";
-    hour > 12 ? hour = hour - 12 : hour = hour;
-    return `${hour}:${min} ${suffix}`;
+    let newHour;
+    hour > 12 ? newHour = hour - 12 : newHour = hour;
+    return `${newHour}:${min} ${suffix}`;
 }
 
 export function formatDate(date){

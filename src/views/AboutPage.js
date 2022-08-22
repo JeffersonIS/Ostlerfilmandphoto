@@ -1,7 +1,6 @@
 import React from "react";
 import DemoFooter from "components/Footers/DemoFooter";
 import ShortPageHeader from "components/Headers/ShortPageHeader.js";
-import AboutPageContent from "components/AboutPageContent.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import { Container, Row, Col} from "reactstrap";
 import Gallery from "react-photo-gallery";

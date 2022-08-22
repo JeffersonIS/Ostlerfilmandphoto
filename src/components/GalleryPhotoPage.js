@@ -1,12 +1,10 @@
 import React from "react";
-import { useHistory } from "react-router";
 import { photoGalleryData } from "data/photoGalleryData.js";
 import PhotoCard from "components/PhotoCard.js"
 import Photos from "components/Photos.js";
 import GalleryPhotoSubMenu from "./GalleryPhotoSubMenu";
 
-function GalleryPhotoPage(props) {
-  let history = useHistory();
+function GalleryPhotoPage() {
   const [activeTab, setActiveTab] = React.useState(0);
   const [currentSession, setCurrentSession] = React.useState(-1);
 

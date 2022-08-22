@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Container, Row, Col, Button, ListGroupItemHeading} from "reactstrap";
+import {Container, Row, Col, Button} from "reactstrap";
 import * as GSheetReader from 'g-sheets-api';
 import DemoFooter from "components/Footers/DemoFooter";
 import ShortPageHeader from "components/Headers/ShortPageHeader.js";
@@ -75,8 +75,9 @@ function ReviewPage() {
                     <>
                       {reviews?.map((review, count) => {
                           if(review[SHOWREVIEWKEY]?.substring(0,3) === 'Yes'){
-                              return(<ReviewCard key={count} review={review} count={count}/>); 
+                            return(<ReviewCard key={count} review={review} count={count}/>); 
                           }
+                          return null;
                       })}
                     </>
                   ) : (
