@@ -6,8 +6,8 @@ import DemoFooter from "components/Footers/DemoFooter";
 import PageTitle from "components/PageTitle";
 import { Container } from "reactstrap"
 import PhotoVideoToggle from "components/PhotoVideoToggle";
-import GalleryPhotoPage from "../components/GalleryPhotoPage";
 import GalleryVideoPage from "../components/GalleryVideoPage";
+import GalleryPhotoPage from "../components/GalleryPhotoPage";
 import { useHistory } from "react-router";
 
 
