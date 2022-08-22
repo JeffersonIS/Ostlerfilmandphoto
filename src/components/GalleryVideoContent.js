@@ -2,7 +2,7 @@ import React from "react";
 import { videoGalleryData } from "data/videoGalleryData.js";
 import VideoCard from "components/VideoCard";
 
-function GalleryVideoPage(props) {
+function GalleryVideoContent(props) {
   const [showAllVideos, setShowAllVideos] = React.useState(true);
   const [currentVideoId, setCurrentVideoId] = React.useState(null);
 
@@ -39,4 +39,4 @@ function GalleryVideoPage(props) {
   );
 }
 
-export default GalleryVideoPage;
+export default GalleryVideoContent;
