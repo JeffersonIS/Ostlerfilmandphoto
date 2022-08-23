@@ -4,9 +4,10 @@ const videoPricingData = [
         price: "$800",
         salePrice: "",
         detailItems: [
-            "3-4 min bridal video",
             "2 hours of coverage",
-            "Posting rights",
+            "3-5 min highlight film",
+            "45-60 second trailer",
+            "1 week delivery time",
             "*This typically is filmed on a day before the wedding day and can be played during the reception if desired."
         ]},
     {
@@ -14,11 +15,12 @@ const videoPricingData = [
         price: "$1800",
         salePrice: "",
         detailItems: [
-            "6-8 min highlight video",
             "8 hours of coverage",
-            "Coverage of all wedding day activities",
-            "Posting rights",
-            "Includes a small 'bridal' session if the couple desires (on the same day as the wedding).",
+            "8-10 min highlight video",
+            "45-60 second trailer",
+            "2 week delivery time",
+            "Coverage of all wedding day activities (getting ready, ceremony, toasts, reception).",
+            "Includes a small 'bridal' video session if the couple desires (on the same day as the wedding), in accordance with the photographer.",
         ]},
     ]
 
