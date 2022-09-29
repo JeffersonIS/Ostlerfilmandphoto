@@ -13,7 +13,11 @@ function SuccessModal(props) {
                 </h5>
             </div>
             <div className="modal-body">
-                <p className="font500">Thank you for sending us an inquiry! We just sent you a confirmation email.</p>
+                <p className="font500">Thank you for sending us an inquiry! We just sent you a confirmation email. 
+                <br/><br/>
+                If you did not get an email, please reach out to us directly. Thank you!</p>
+                <br/>
+                <p className="font500">Like and follow us on Instagram and Facebook @jeffersonostlerfilms</p>
             </div>
             <div className="text-right mb-2 mr-3">
                 <div className="right-side">

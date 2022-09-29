@@ -1,3 +1,9 @@
+.landing-page-logo{
+  width: 50%;
+  margin-top: -3em;
+  opacity: .97;
+}
+
 .card-style {
     max-width: 50em;
     width: auto;
@@ -63,8 +69,8 @@
 }
 
 .video-iframe{
-  width: 1000px;
-  height: 562px;
+  width: 600px;
+  height: 336px;
 }
 
 /*TOGGLE*/
@@ -96,6 +102,21 @@
 
 .contact-toggle-text-smallWidth{
   display: none;
+} 
+
+.contact-session-type{
+  width: 50%;
+}
+
+.contact-session-type-container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.video-grid-container{
+  display: flex;
+  justify-content: center;
 }
 
 .button-toggle {
@@ -150,6 +171,7 @@
   color: white;
   margin-bottom: 1em;
 }
+
 
 .date-error-message{
   display: fixed;
@@ -332,6 +354,13 @@ stroke-linecap: round;
     display: inline;
   }
 
+  .landing-page-logo{
+    width: 60%;
+  }
+
+  .contact-session-type{
+    width: 80%;
+  }
 
 }
 
@@ -367,9 +396,17 @@ stroke-linecap: round;
     width: 90%;
   }
 
-
   .video-iframe{
     width: 350px;
     height: 210px;
+  }
+
+  .landing-page-logo{
+    margin-top: -4em;
+    width: 95%;
+  }
+
+  .contact-session-type{
+    width: 100%;
   }
   }

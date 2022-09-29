@@ -16,8 +16,6 @@ function GalleryVideoContent(props) {
     props.params.id ? setShowAllVideos(false): console.log('');
   }, [props.params.id])
 
-  console.log('showall videos', showAllVideos);
-
   return (
       <div>
         {showAllVideos ?

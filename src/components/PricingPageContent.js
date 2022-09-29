@@ -1,28 +1,29 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import PageTitle from "./PageTitle";
-import photoPricingData from "data/photoPricingData.js";
+// import PageTitle from "./PageTitle";
+// import photoPricingData from "data/photoPricingData.js";
 import videoPricingData from "data/videoPricingData.js";
-import { FcFeedback, FcPhone, FcCompactCamera, FcCollaboration, FcDiploma2 } from "react-icons/fc";
-import  BookNowButton  from "components/BookNowButton.js";
+// import { FcFeedback, FcPhone, FcCompactCamera, FcCollaboration, FcDiploma2 } from "react-icons/fc";
+// import  BookNowButton  from "components/BookNowButton.js";
 import "components/componentStyle.css";
-import PhotoVideoToggle from "./PhotoVideoToggle";
-import { useHistory } from "react-router-dom"; 
-
+import GalleryVideoGrid from "../components/GalleryVideoGrid";
+// import PhotoVideoToggle from "./PhotoVideoToggle";
+// import { useHistory } from "react-router-dom"; 
 
 function PricingPageContent(props){
-    let pricingData;
-    let history = useHistory();  
-    let showVideoData;
 
-    props.type === "video" ? showVideoData = true : showVideoData = false;
+    let pricingData = videoPricingData
+    // let history = useHistory();  
+    // let showVideoData;
+
+    // props.type === "video" ? showVideoData = true : showVideoData = false;
   
-    const handleToggleChange = (event) => {
-        console.log(event)
-      history.replace(`/pricing/${event}`);
-    }
+    // const handleToggleChange = (event) => {
+    //     console.log(event)
+    //   history.replace(`/pricing/${event}`);
+    // }
   
-    showVideoData ? pricingData = videoPricingData : pricingData = photoPricingData;
+    // showVideoData ? pricingData = videoPricingData : pricingData = photoPricingData;
 
     const pricingTableHTML = pricingData.map(item => {
         let pricingHTML;
@@ -58,37 +59,26 @@ function PricingPageContent(props){
             </Col>
     )});
 
-    // const faqTableHTML = faqData.map((item, count) => {
-    //     return(
-    //         <div key={count} >
-    //             <p  className="h5" style={{fontSize:"130%"}}>{item.question}</p>
-    //             <p className="pb-4" style={{fontSize:"110%"}} >{item.answer}</p>
-    //         </div>
-    //     )
-    // })
-
     return (
         <>
-            <div className="section profile-content">
-            <Container
-                style={{
-                    transform: "translate(0,-8em)",
-                }}>
-                <PageTitle title="Pricing" />
-
+            <div>
+            <Container>
+                {/* <PageTitle title="Pricing" /> */}
                     <div className="text-center font500">
-                            <PhotoVideoToggle
+                            {/* <PhotoVideoToggle
                                 onChange={handleToggleChange}
                                 showVideoData={showVideoData}
-                            ></PhotoVideoToggle>
+                            ></PhotoVideoToggle> */}
                         <Row>
-                        {pricingTableHTML}
+                            {pricingTableHTML}
                         </Row>
-
+                            <Row className="video-grid-container mt-3 pt-5">
+                                <GalleryVideoGrid />
+                            </Row>
                     </div>
-                    <BookNowButton addNote={true}></BookNowButton>
+                    {/* <BookNowButton addNote={true}></BookNowButton> */}
 
-                    <div className="mt-4 pt-3" >
+                    {/* <div className="mt-4 pt-3" >
                         <Row>
                             <Col className="font120">
                                 <h4 className="h4 mb-4 font500">What to Expect When You Book</h4>
@@ -135,9 +125,9 @@ function PricingPageContent(props){
 
                             </Col>                            
                         </Row>
-                    </div>
+                    </div> */}
 
-                    <BookNowButton></BookNowButton>
+                    {/* <BookNowButton></BookNowButton> */}
                     {/* <div className="mt-5 pt-3" >
                         <h4 className="h4 mb-4">Frequently Asked Questions</h4>
                         <div >
