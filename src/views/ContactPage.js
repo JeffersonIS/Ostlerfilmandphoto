@@ -1,17 +1,20 @@
 import React from "react";
 import {Container} from "reactstrap";
-import ShortPageHeader from "components/Headers/ShortPageHeader.js";
+// import ShortPageHeader from "components/Headers/ShortPageHeader.js";
 import ContactForm from "components/ContactForm/ContactForm.js";
-import PageTitle from "components/PageTitle";
+// import PageTitle from "components/PageTitle";
 import ContactMethods from "components/ContactForm/ContactMethods.js";
 import SuccessModal from "components/ContactForm/SuccessModal.js";
 import ErrorModal from "components/ContactForm/ErrorModal.js";
 import DemoFooter from "components/Footers/DemoFooter";
-import IndexNavbar from "components/Navbars/IndexNavbar";
+// import IndexNavbar from "components/Navbars/IndexNavbar";
+// import {ReactComponent as GreyLogoIcon} from '../assets/img/grey-logo.svg'
+import { useHistory } from "react-router";
 
 function ContactPage() {
   const [successModal, setSuccessModal]= React.useState(false);
   const [errorModal, setErrorModal]= React.useState(false);
+  let history = useHistory();
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -21,19 +24,28 @@ function ContactPage() {
     };
   });
 
+  function updateUrl(string = ''){
+    history.replace(`/contact/${string}`)
+  }
+
   return (
     <div>
-      <IndexNavbar/>
-      {/* <IndexNavbarGrey/> */}
-      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_8023_l0pTznAvLc8o.jpg?updatedAt=1641597903225"/>
-      <div className="section profile-content">
-          <Container className="page-container">
+      {/* <IndexNavbar/>
+      <IndexNavbarGrey/> */}
+      {/* <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_8023_l0pTznAvLc8o.jpg?updatedAt=1641597903225"/> */}
+      {/* <div className="">
+        <GreyLogoIcon className="contact-page-logo mb-4"/>
+      </div> */}
 
-              <PageTitle title="Book Now"/>
+      <div className="section profile-content mt-4">
+          <Container>
+            <div className="text-center">
+              <h2 className='mb-3'>Book Your Wedding Today</h2>
+            </div>
 
-              <ContactForm setSuccessModal={setSuccessModal} setErrorModal={setErrorModal}/>
+              <ContactForm setSuccessModal={setSuccessModal} setErrorModal={setErrorModal} updateUrl={(e) => updateUrl(e)}/>
 
-              <ContactMethods></ContactMethods>
+              <ContactMethods/>
 
               <SuccessModal isOpen={successModal} setSuccessModal={setSuccessModal}/>
               

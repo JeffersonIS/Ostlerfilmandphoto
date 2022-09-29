@@ -21,6 +21,8 @@ import React from "react";
 import "../componentStyle.css"
 // reactstrap components
 import { Row, Container } from "reactstrap";
+import {ReactComponent as GreyLogoIcon} from '../../assets/img/grey-logo.svg'
+
 
 function DemoFooter() {
   return (
@@ -30,17 +32,12 @@ function DemoFooter() {
           <nav className="footer-nav footer-nav-mobile">
             <ul>
               <li>
-                <a href="/pricing/video" >
-                  Pricing
+                <a href="/">
+                  <GreyLogoIcon className="grey-svg"  width={40} height={40}/>
                 </a>
-              </li>|
+              </li>
               <li>
-                <a href="/contact">
-                Book Now
-                </a>
-              </li>|
-              <li>
-                <a href="https://www.facebook.com/Ostler-Film-and-Photo-104315925157843"
+                <a href="https://www.facebook.com/JeffersonOstlerFilms"
                   title="Like us on Facebook"
                   target="_blank">
                   <i className="fa fa-facebook-square" />
