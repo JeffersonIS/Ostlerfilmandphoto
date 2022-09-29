@@ -27,6 +27,9 @@ export function advanceForm(setState, state, tabNum) {
                 changeTab(setState, tabNum)
             }
             break;
+        case 3:
+            changeTab(setState, tabNum)
+            break;
         default:
             return;
       }
@@ -38,6 +41,23 @@ function changeTab(setState, tabNum){
 
 function validateSection1(setState, state){
     let advance = true;
+
+    let type = state.type;
+    if(type === "Bridals/First Look Video" || type === "Full Day Wedding Package"){
+        setState({ typeValid: true })
+        setState({typeInvalid: false})
+    } else {
+        advance = false;
+        setState({ typeValid: false })
+        setState({typeInvalid: true})
+    }
+
+    return advance;
+}
+
+function validateSection2(setState, state){
+    let advance = true;
+
     if(!state.requested_date){
         let message = 'Please choose a date'
         setErroState(setState, 'dateErrorMessage', message)
@@ -56,65 +76,6 @@ function validateSection1(setState, state){
             setErroState(setState, 'timeErrorMessage', message)
         }
     }
-    return advance;
-}
-
-function validateSection2(setState, state){
-    let nameValid, emailValid, typeValid, locationValid;
-    let advance = true;
-
-    //Validate Name
-    if(state.name === ""){
-        nameValid = false;
-        setState({ nameValid: false })
-        setState({ nameInvalid: true })
-    } else {
-        nameValid = true;
-        setState({ nameValid: true })
-        setState({ nameInvalid: false })
-    }
-
-    //Validate Email
-    let emailRegex = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-    if(emailRegex.test(state.email)){
-        emailValid = true;
-        setState({ emailValid: true })
-        setState({emailInvalid: false})
-    } else {
-        emailValid = false;
-        setState({ emailValid: false })
-        setState({emailInvalid: true})
-    }
-
-    //Validate Type
-    let type = state.type;
-    if(type === "Family" || type === "Engagements/Bridals" || type === "Bridals (Video)" || type === "Wedding Package (Video)" || type === "Senior & Grad"){
-        typeValid = true;
-        setState({ typeValid: true })
-        setState({typeInvalid: false})
-    } else {
-        typeValid = false;
-        setState({ typeValid: false })
-        setState({typeInvalid: true})
-    }
-
-    //Validate location
-    if(state.location === ""){
-        locationValid = false;
-        setState({ locationValid: false })
-        setState({ locationInvalid: true })
-    } else {
-        locationValid = true;
-        setState({ locationValid: true })
-        setState({ locationInvalid: false })
-    }
-
-    let validationArray = [nameValid, emailValid, typeValid, locationValid];
-    validationArray.forEach(item => {
-        if(!item){
-            advance = false;
-        }
-    });
     return advance;
 }
 
@@ -160,7 +121,51 @@ export function handleSubmitHelper(emailjs, setState, state, setSuccessModal, se
  }
 
 function validateSection3(setState, state){
-    return true;
+    let nameValid, emailValid, locationValid;
+    let advance = true;
+
+    //Validate Name
+    if(state.name === ""){
+        nameValid = false;
+        setState({ nameValid: false })
+        setState({ nameInvalid: true })
+    } else {
+        nameValid = true;
+        setState({ nameValid: true })
+        setState({ nameInvalid: false })
+    }
+
+    //Validate Email
+    let emailRegex = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+    if(emailRegex.test(state.email)){
+        emailValid = true;
+        setState({ emailValid: true })
+        setState({emailInvalid: false})
+    } else {
+        emailValid = false;
+        setState({ emailValid: false })
+        setState({emailInvalid: true})
+    }
+
+    //Validate location
+    if(state.location === ""){
+        locationValid = false;
+        setState({ locationValid: false })
+        setState({ locationInvalid: true })
+    } else {
+        locationValid = true;
+        setState({ locationValid: true })
+        setState({ locationInvalid: false })
+    }
+
+    let validationArray = [nameValid, emailValid, locationValid];
+    validationArray.forEach(item => {
+        if(!item){
+            advance = false;
+        }
+    });
+    console.log('validate section 3', advance)
+    return advance;
 }
 
 function setErroState(setState, param, message) {

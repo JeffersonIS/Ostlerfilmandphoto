@@ -22,7 +22,7 @@ import React from "react";
 
 // core components
 import LandingPageHeader from "components/Headers/LandingPageHeader";
-import IndexNavbar from "components/Navbars/IndexNavbar";
+// import IndexNavbar from "components/Navbars/IndexNavbar";
 // index sections
 
 
@@ -37,7 +37,7 @@ function Index() {
 
   return (
     <>
-      <IndexNavbar/>
+      {/* <IndexNavbar/> */}
       <LandingPageHeader />
     </>
   );

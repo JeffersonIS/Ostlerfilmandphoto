@@ -11,7 +11,7 @@ function BookNowButton(props) {
                     <a href="/contact">
                         <Button color="warning" type="button"
                             className="m-2 mt-5" style={{minWidth: "25em"}}>
-                            Book Now
+                            Book Your Wedding Now
                         </Button>
                     </a>
                     {props.addNote ?

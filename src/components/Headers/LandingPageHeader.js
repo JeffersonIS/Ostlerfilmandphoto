@@ -20,9 +20,10 @@ import React from "react";
 
 // reactstrap components
 import { Button, Container } from "reactstrap";
-
+import {ReactComponent as WhiteLogoIcon} from '../../assets/img/white-logo.svg'
+import '../componentStyle.css';
 // core components
-const headerImgPath = "https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_7135_x5tD7Eckc.jpg?updatedAt=1641594607775";
+const headerImgPath = "https://ik.imagekit.io/ostlerfilmandphoto/webheader_3.1.2_vrsmAzEt0.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1664392795785";
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();
@@ -55,21 +56,20 @@ function LandingPageHeader() {
         <div className="filter" />
         <Container>
           <div className="motto text-center">
-            <h1>Jefferson Ostler Films</h1>
-            {/* <h3>Wedding | Portrait | Family</h3> */}
-            <br />
+          <WhiteLogoIcon className="landing-page-logo mb-4"/>
+          <br/>
             <a href="/contact">
-              <Button color="warning" outline type="button" className="m-2 mt-4">
-                    Book a Session
+              <Button size="lg" color="warning" type="button" className="m-2 mt-4">
+                    Book Your Wedding Now
               </Button>
             </a>
             <a href="/gallery">
-              <Button outline type="button" className="m-2 mt-4"
+              {/* <Button outline type="button" className="m-2 mt-4"
               onMouseOver={(e)=> {e.target.style.color = "gray"; e.target.style.backgroundColor = "white"}} color="white" style={{borderColor:"white"}}
               onMouseOut={(e)=> {e.target.style.color = "white"; e.target.style.backgroundColor = "transparent"}}
               >
                     See the Gallery
-              </Button>
+              </Button> */}
             </a>
 
           </div>    
