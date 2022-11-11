@@ -2,7 +2,7 @@ const videoPricingData = [
     {
         title: "Bridals/First Look Video",
         price: "$1000",
-        salePrice: "",
+        salePrice: "$800",
         detailItems: [
             "2 hours of coverage",
             "3-5 min first look film",
@@ -13,7 +13,7 @@ const videoPricingData = [
     {
         title: "Full Day Wedding Package",
         price: "$2100",
-        salePrice: "",
+        salePrice: "$1680",
         detailItems: [
             "8 hours of coverage",
             "8-10 min highlight video",
