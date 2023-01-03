@@ -1,29 +1,28 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
-// import PageTitle from "./PageTitle";
-// import photoPricingData from "data/photoPricingData.js";
+import { Row, Col } from "reactstrap";
+import photoPricingData from "data/photoPricingData.js";
 import videoPricingData from "data/videoPricingData.js";
 // import { FcFeedback, FcPhone, FcCompactCamera, FcCollaboration, FcDiploma2 } from "react-icons/fc";
-// import  BookNowButton  from "components/BookNowButton.js";
+import  BookNowButton  from "components/BookNowButton.js";
 import "components/componentStyle.css";
-import GalleryVideoGrid from "../components/GalleryVideoGrid";
-// import PhotoVideoToggle from "./PhotoVideoToggle";
-// import { useHistory } from "react-router-dom"; 
+// import GalleryVideoGrid from "../components/GalleryVideoGrid";
+import PhotoVideoToggle from "./PhotoVideoToggle";
+import { useHistory } from "react-router-dom"; 
 
 function PricingPageContent(props){
 
     let pricingData = videoPricingData
-    // let history = useHistory();  
-    // let showVideoData;
+    let history = useHistory();  
+    let showVideoData;
 
-    // props.type === "video" ? showVideoData = true : showVideoData = false;
+    props.type === "video" ? showVideoData = true : showVideoData = false;
   
-    // const handleToggleChange = (event) => {
-    //     console.log(event)
-    //   history.replace(`/pricing/${event}`);
-    // }
+    const handleToggleChange = (event) => {
+        console.log(event)
+      history.replace(`/pricing/${event}`);
+    }
   
-    // showVideoData ? pricingData = videoPricingData : pricingData = photoPricingData;
+    showVideoData ? pricingData = videoPricingData : pricingData = photoPricingData;
 
     const pricingTableHTML = pricingData.map(item => {
         let pricingHTML;
@@ -62,21 +61,19 @@ function PricingPageContent(props){
     return (
         <>
             <div>
-            <Container>
-                {/* <PageTitle title="Pricing" /> */}
                     <div className="text-center font500">
-                            {/* <PhotoVideoToggle
+                            <PhotoVideoToggle
                                 onChange={handleToggleChange}
                                 showVideoData={showVideoData}
-                            ></PhotoVideoToggle> */}
+                            ></PhotoVideoToggle>
                         <Row>
                             {pricingTableHTML}
                         </Row>
-                            <Row className="video-grid-container mt-3 pt-5">
+                            {/* <Row className="video-grid-container mt-3 pt-5">
                                 <GalleryVideoGrid />
-                            </Row>
+                            </Row> */}
                     </div>
-                    {/* <BookNowButton addNote={true}></BookNowButton> */}
+                    <BookNowButton addNote={true}></BookNowButton>
 
                     {/* <div className="mt-4 pt-3" >
                         <Row>
@@ -134,7 +131,6 @@ function PricingPageContent(props){
                             {faqTableHTML}
                         </div>
                     </div> */}
-                </Container>
             </div>
         </>
         );
