@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import {Container, Row, Col} from "reactstrap";
 import * as GSheetReader from 'g-sheets-api';
-// import DemoFooter from "components/Footers/DemoFooter";
-// import ShortPageHeader from "components/Headers/ShortPageHeader.js";
-// import IndexNavbar from "components/Navbars/IndexNavbar";
-// import PageTitle from "components/PageTitle";
+import DemoFooter from "components/Footers/DemoFooter";
+import ShortPageHeader from "components/Headers/ShortPageHeader.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import PageTitle from "components/PageTitle";
 import ReviewCard from "components/ReviewCard.js";
 import { OPTIONS, SHOWREVIEWKEY, getReviewTotals } from "../utils/review-utils.js";
 import LoadingSVG from "components/LoadingSVG.js";
@@ -41,11 +41,13 @@ function ReviewPage() {
 
   return (
     <div>
-      {/* <IndexNavbar/>
-      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Engagements/TheEvans/IMG_5576_cfBsK4pyT.jpg"/> */}
+      <IndexNavbar/>
+      <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Engagements/TheEvans/IMG_5576_cfBsK4pyT.jpg"/>
       <div className="section profile-content">
-          <Container className="mt-5">
-            {/* <PageTitle title="Reviews" />  */}
+          <Container style={{
+                    transform: "translate(0,-8em)",
+                }}>
+            <PageTitle title="Reviews" /> 
             <div className="reviews-grid">
             <Row className="mr-1 mt-2">
                     <Col>
@@ -83,7 +85,7 @@ function ReviewPage() {
             </div>
           </Container>
       </div>
-      {/* <DemoFooter/> */}
+      <DemoFooter/>
     </div>
   );
 }

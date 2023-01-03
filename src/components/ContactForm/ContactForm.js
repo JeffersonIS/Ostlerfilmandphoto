@@ -8,8 +8,8 @@ import Calendar from './Calendar';
 import ContactNavToggle from './ContactNavToggle';
 import TimePicker from 'react-bootstrap-time-picker';
 import ContactReviewPage from './ContactReviewPage';
-import PricingPageContent from 'components/PricingPageContent';
-import ReviewPage from "../../views/ReviewPage";
+// import PricingPageContent from 'components/PricingPageContent';
+// import ReviewPage from "../../views/ReviewPage";
 
 class ContactForm extends Component {
     constructor(props){
@@ -124,6 +124,9 @@ render() {
                       <option>Select</option>
                       <option>Bridals/First Look Video</option>
                       <option>Full Day Wedding Package</option>
+                      <option>Senior & Grad</option>
+                      <option>Family</option>
+                      <option>Engagments/Bridals</option>
 
                   </Input>
 
@@ -133,13 +136,13 @@ render() {
             </Col>
           </Row>
 
-          <Row className='mt-2'>
+          {/* <Row className='mt-2'>
               <PricingPageContent/>
-          </Row>
-          <br/>
-          <Row className='mt-3 mb-5≈'>
+          </Row> */}
+          <br></br>
+          {/* <Row className='mt-3 mb-5≈'>
               <ReviewPage />
-          </Row>
+          </Row> */}
           
             <div className='text-right'>
               <Button 

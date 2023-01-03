@@ -12,7 +12,6 @@ function GalleryPhotoPage() {
       setCurrentSession(-1);
       setActiveTab(tab);
   }
-  console.log('current session', currentSession)
   return (
     <div>
       {currentSession < 0 ? 
