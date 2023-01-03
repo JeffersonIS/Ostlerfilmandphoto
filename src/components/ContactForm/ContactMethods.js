@@ -19,7 +19,7 @@ function ContactMethods(props){
             </Row>
             <h5 className="h4 mb-1 font500">Have Other Questions?</h5>
             <p  className='font120 font500 mb-2'>
-                Message us directly and follow us on social media or send us an email.
+                Message us directly and follow us on social media or send us an email. We'll get back to you quickly.
             </p>
             <div className="mb-3">
                 <p className="font500">@jeffersonostlerfilms</p>

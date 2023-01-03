@@ -60,16 +60,16 @@ function LandingPageHeader() {
           <br/>
             <a href="/contact">
               <Button size="lg" color="warning" type="button" className="m-2 mt-4">
-                    Book Your Wedding Now
+                    Book Now
               </Button>
             </a>
-            <a href="/gallery">
-              {/* <Button outline type="button" className="m-2 mt-4"
+            <a href="/gallery/video">
+              <Button outline type="button" size="lg" className="m-2 mt-4"
               onMouseOver={(e)=> {e.target.style.color = "gray"; e.target.style.backgroundColor = "white"}} color="white" style={{borderColor:"white"}}
               onMouseOut={(e)=> {e.target.style.color = "white"; e.target.style.backgroundColor = "transparent"}}
               >
-                    See the Gallery
-              </Button> */}
+                    See Gallery
+              </Button>
             </a>
 
           </div>    

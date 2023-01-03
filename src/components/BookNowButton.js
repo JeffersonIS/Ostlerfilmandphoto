@@ -11,11 +11,11 @@ function BookNowButton(props) {
                     <a href="/contact">
                         <Button color="warning" type="button"
                             className="m-2 mt-5" style={{minWidth: "25em"}}>
-                            Book Your Wedding Now
+                            Book Now
                         </Button>
                     </a>
                     {props.addNote ?
-                        <><br></br><small>Prices do not include travel costs (see below)</small></> :
+                        <><br></br><small>Prices do not include travel costs</small></> :
                         <></>}
                 </Col>
             </Row>

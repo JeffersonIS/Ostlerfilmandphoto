@@ -7,7 +7,6 @@ function GalleryVideoGrid() {
   const [currentVideoId, setCurrentVideoId] = React.useState(null);
 
   const handleSelectSession = (id) => {
-    console.log(id)
     setCurrentVideoId(id);
     setShowAllVideos(false);
   };

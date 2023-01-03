@@ -8,7 +8,7 @@ import SuccessModal from "components/ContactForm/SuccessModal.js";
 import ErrorModal from "components/ContactForm/ErrorModal.js";
 import DemoFooter from "components/Footers/DemoFooter";
 // import IndexNavbar from "components/Navbars/IndexNavbar";
-// import {ReactComponent as GreyLogoIcon} from '../assets/img/grey-logo.svg'
+import IndexNavbarNoHeroImg from "components/Navbars/IndexNavbarNoHeroImg.js";
 import { useHistory } from "react-router";
 
 function ContactPage() {
@@ -30,17 +30,14 @@ function ContactPage() {
 
   return (
     <div>
-      {/* <IndexNavbar/>
-      <IndexNavbarGrey/> */}
+      <IndexNavbarNoHeroImg/>
       {/* <ShortPageHeader path="https://ik.imagekit.io/ostlerfilmandphoto/Wedding/Shumway/IMG_8023_l0pTznAvLc8o.jpg?updatedAt=1641597903225"/> */}
-      {/* <div className="">
-        <GreyLogoIcon className="contact-page-logo mb-4"/>
-      </div> */}
-
-      <div className="section profile-content mt-4">
+      <br></br>
+      <br></br>
+      <div className="section profile-content mt-5">
           <Container>
             <div className="text-center">
-              <h2 className='mb-3'>Book Your Wedding Today</h2>
+              <h2 className='mb-3'>Book Now</h2>
             </div>
 
               <ContactForm setSuccessModal={setSuccessModal} setErrorModal={setErrorModal} updateUrl={(e) => updateUrl(e)}/>

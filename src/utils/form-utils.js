@@ -43,7 +43,7 @@ function validateSection1(setState, state){
     let advance = true;
 
     let type = state.type;
-    if(type === "Bridals/First Look Video" || type === "Full Day Wedding Package"){
+    if(type === "Bridals/First Look Video" || type === "Full Day Wedding Package" || type === "Senior & Grad" || type === "Family" || type === "Engagements/Bridals"){
         setState({ typeValid: true })
         setState({typeInvalid: false})
     } else {
@@ -164,7 +164,6 @@ function validateSection3(setState, state){
             advance = false;
         }
     });
-    console.log('validate section 3', advance)
     return advance;
 }
 

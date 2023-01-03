@@ -1,7 +1,7 @@
 const photoPricingData = [
     {
         title: "Senior & Grad",
-        price: "$250",
+        price: "$200",
         salePrice: "",
         detailItems: [
             "60 min session",
@@ -11,7 +11,7 @@ const photoPricingData = [
         ]},
     {
         title: "Family",
-        price: "$300",
+        price: "$250",
         salePrice: "",
         detailItems: [
             "60-90 min session",
@@ -21,10 +21,10 @@ const photoPricingData = [
         ]},
         {
             title: "Engagments/Bridals",
-            price: "$350",
+            price: "$300",
             salePrice: "",
             detailItems: [
-                "~90 min session",
+                "90 min session",
                 "50+ images",
                 "Printing and posting rights",
         ]},
